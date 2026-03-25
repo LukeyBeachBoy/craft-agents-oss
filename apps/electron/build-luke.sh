@@ -96,12 +96,14 @@ echo "Packaging Luke Agents..."
 cd "$ELECTRON_DIR"
 npx electron-builder --mac --arm64 --config electron-builder-luke.yml
 
-# 9. Patch the packaged app (electron-builder copies fresh files, so we patch after)
+# 9. Patch the packaged app's app name so Electron uses a separate userData dir and instance lock
+# This lets Luke Agents run alongside official Craft Agents simultaneously.
+# We do NOT patch ".craft-agent" — both apps share the same data directory (~/.craft-agent)
+# for sources, skills, workspaces, preferences, conversations, etc.
 PACKAGED_MAIN="$ELECTRON_DIR/release/mac-arm64/Luke Agents.app/Contents/Resources/app/dist/main.cjs"
 if [ -f "$PACKAGED_MAIN" ]; then
-  sed -i '' 's|".craft-agent"|".luke-agents"|g' "$PACKAGED_MAIN"
   sed -i '' 's|Craft Agents|Luke Agents|g' "$PACKAGED_MAIN"
-  echo "Patched packaged app: data dir → ~/.luke-agents, app name → Luke Agents"
+  echo "Patched app name → Luke Agents (shared data dir: ~/.craft-agent)"
 else
   echo "WARNING: Could not find packaged main.cjs to patch"
 fi

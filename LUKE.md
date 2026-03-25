@@ -6,8 +6,11 @@ Personal remix of [Craft Agents](https://github.com/lukilabs/craft-agents-oss) w
 |---|---|---|
 | App name | Craft Agents | Luke Agents |
 | Bundle ID | `com.lukilabs.craft-agent` | `com.lukeybeachboy.luke-agents` |
-| Data dir | `~/.craft-agent/` | `~/.luke-agents/` |
+| Data dir | `~/.craft-agent/` | `~/.craft-agent/` (shared!) |
+| Electron dir | `~/Library/Application Support/Craft Agents/` | `~/Library/Application Support/Luke Agents/` |
 | Source | Official releases | Built from `luke/dev` branch |
+
+Both apps share the same data directory — your sources, skills, workspaces, preferences, and conversations are available in both. They can run simultaneously because Electron's internal state (singleton lock, caches) is separate.
 
 ## Custom Features
 
@@ -69,10 +72,10 @@ cd apps/electron
 
 This outputs `release/Luke-Agents-arm64.dmg`. Open it and drag to Applications.
 
-**First run:** Your config will be empty. To copy your existing Craft Agents config:
+**After installing**, remove macOS quarantine (required since the app isn't notarized):
 
 ```bash
-cp -r ~/.craft-agent/* ~/.luke-agents/
+xattr -cr /Applications/Luke\ Agents.app
 ```
 
 ## Branch Strategy
@@ -151,6 +154,6 @@ The premium request indicator requires a GitHub fine-grained PAT with **Plan (re
 2. Save it:
 
 ```bash
-echo '{"pat": "github_pat_..."}' > ~/.luke-agents/github-billing.json
-chmod 600 ~/.luke-agents/github-billing.json
+echo '{"pat": "github_pat_..."}' > ~/.craft-agent/github-billing.json
+chmod 600 ~/.craft-agent/github-billing.json
 ```
