@@ -61,10 +61,9 @@ EOF
 export CRAFT_CONFIG_DIR="$HOME/.luke-agents"
 
 # 4. Patch the main process to use ~/.luke-agents by default
-# We inject CRAFT_CONFIG_DIR into the built main.cjs
-if grep -q "CRAFT_CONFIG_DIR" "$ELECTRON_DIR/dist/main.cjs"; then
-  # Replace the default fallback path
-  sed -i '' "s|join(homedir(), '.craft-agent')|join(homedir(), '.luke-agents')|g" "$ELECTRON_DIR/dist/main.cjs"
+# The bundler outputs double quotes: homedir(), ".craft-agent"
+if grep -q '".craft-agent"' "$ELECTRON_DIR/dist/main.cjs"; then
+  sed -i '' 's|".craft-agent"|".luke-agents"|g' "$ELECTRON_DIR/dist/main.cjs"
   echo "Patched data directory to ~/.luke-agents"
 fi
 
@@ -115,6 +114,9 @@ if [ -f "$DMG_PATH" ]; then
   echo ""
   echo "Data directory: ~/.luke-agents"
   echo "Install: Open the DMG and drag to Applications"
+  echo ""
+  echo "IMPORTANT: After installing, remove macOS quarantine:"
+  echo "  xattr -cr /Applications/Luke\\ Agents.app"
   echo ""
   echo "First run: Your workspaces/sources/preferences will be empty."
   echo "To copy your existing config:"
