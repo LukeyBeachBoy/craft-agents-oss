@@ -70,6 +70,21 @@ if [ -d "$SDK_SOURCE" ]; then
   cp -r "$SDK_SOURCE" "$ELECTRON_DIR/node_modules/@anthropic-ai/"
 fi
 
+# 6. Copy pi-agent-server to resources (built by electron:build:main, needs copying)
+PI_DIST="$ROOT_DIR/packages/pi-agent-server/dist"
+PI_DEST="$ELECTRON_DIR/resources/pi-agent-server"
+if [ -d "$PI_DIST" ]; then
+  echo "Copying pi-agent-server..."
+  mkdir -p "$PI_DEST"
+  cp -r "$PI_DIST"/* "$PI_DEST/"
+  # Also copy koffi native module (required by Pi SDK)
+  KOFFI_SOURCE="$ROOT_DIR/node_modules/koffi"
+  if [ -d "$KOFFI_SOURCE" ]; then
+    mkdir -p "$PI_DEST/node_modules/koffi"
+    cp -r "$KOFFI_SOURCE"/* "$PI_DEST/node_modules/koffi/"
+  fi
+fi
+
 # 6. Copy interceptor
 for f in unified-network-interceptor.ts interceptor-common.ts feature-flags.ts interceptor-request-utils.ts; do
   if [ -f "$ROOT_DIR/packages/shared/src/$f" ]; then
