@@ -60,12 +60,17 @@ EOF
 # This prevents conflicts with the official Craft Agents app
 export CRAFT_CONFIG_DIR="$HOME/.luke-agents"
 
-# 4. Patch the main process to use ~/.luke-agents by default
+# 4. Patch the main process to use ~/.luke-agents and a separate app identity
 # The bundler outputs double quotes: homedir(), ".craft-agent"
 if grep -q '".craft-agent"' "$ELECTRON_DIR/dist/main.cjs"; then
   sed -i '' 's|".craft-agent"|".luke-agents"|g' "$ELECTRON_DIR/dist/main.cjs"
   echo "Patched data directory to ~/.luke-agents"
 fi
+# Patch the app name so Electron uses a separate userData dir and instance lock
+# Source: app.setName(process.env.CRAFT_APP_NAME || 'Craft Agents')
+# The bundler may use single or double quotes, so handle both
+sed -i '' 's|Craft Agents|Luke Agents|g' "$ELECTRON_DIR/dist/main.cjs"
+echo "Patched app name to Luke Agents"
 
 # 5. Copy SDK (same as official build)
 SDK_SOURCE="$ROOT_DIR/node_modules/@anthropic-ai/claude-agent-sdk"
