@@ -60,17 +60,7 @@ EOF
 # This prevents conflicts with the official Craft Agents app
 export CRAFT_CONFIG_DIR="$HOME/.luke-agents"
 
-# 4. Patch the main process to use ~/.luke-agents and a separate app identity
-# The bundler outputs double quotes: homedir(), ".craft-agent"
-if grep -q '".craft-agent"' "$ELECTRON_DIR/dist/main.cjs"; then
-  sed -i '' 's|".craft-agent"|".luke-agents"|g' "$ELECTRON_DIR/dist/main.cjs"
-  echo "Patched data directory to ~/.luke-agents"
-fi
-# Patch the app name so Electron uses a separate userData dir and instance lock
-# Source: app.setName(process.env.CRAFT_APP_NAME || 'Craft Agents')
-# The bundler may use single or double quotes, so handle both
-sed -i '' 's|Craft Agents|Luke Agents|g' "$ELECTRON_DIR/dist/main.cjs"
-echo "Patched app name to Luke Agents"
+# 4. (Post-packaging patch will be applied after electron-builder, see step 9)
 
 # 5. Copy SDK (same as official build)
 SDK_SOURCE="$ROOT_DIR/node_modules/@anthropic-ai/claude-agent-sdk"
@@ -106,10 +96,23 @@ echo "Packaging Luke Agents..."
 cd "$ELECTRON_DIR"
 npx electron-builder --mac --arm64 --config electron-builder-luke.yml
 
-# 9. Clean up temp config
+# 9. Patch the packaged app (electron-builder copies fresh files, so we patch after)
+PACKAGED_MAIN="$ELECTRON_DIR/release/mac-arm64/Luke Agents.app/Contents/Resources/app/dist/main.cjs"
+if [ -f "$PACKAGED_MAIN" ]; then
+  sed -i '' 's|".craft-agent"|".luke-agents"|g' "$PACKAGED_MAIN"
+  sed -i '' 's|Craft Agents|Luke Agents|g' "$PACKAGED_MAIN"
+  echo "Patched packaged app: data dir → ~/.luke-agents, app name → Luke Agents"
+else
+  echo "WARNING: Could not find packaged main.cjs to patch"
+fi
+
+# 10. Re-sign after patching (ad-hoc, since we modified the binary)
+codesign --force --deep --sign - "$ELECTRON_DIR/release/mac-arm64/Luke Agents.app" 2>/dev/null || true
+
+# 11. Clean up temp config
 rm -f "$ELECTRON_DIR/electron-builder-luke.yml"
 
-# 10. Done
+# 12. Done
 DMG_PATH="$ELECTRON_DIR/release/Luke-Agents-arm64.dmg"
 if [ -f "$DMG_PATH" ]; then
   echo ""
