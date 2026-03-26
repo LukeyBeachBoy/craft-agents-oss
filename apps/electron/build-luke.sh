@@ -27,6 +27,7 @@ productName: Luke Agents
 mac:
   category: public.app-category.productivity
   icon: resources/icon.icns
+  identity: null
   extendInfo:
     CFBundleIconName: AppIcon
   target:
@@ -106,10 +107,10 @@ if [ ! -f "$ELECTRON_DIR/vendor/bun/bun" ]; then
   rm -rf "$TEMP_DIR"
 fi
 
-# 8. Package with electron-builder using our override config
-echo "Packaging Luke Agents..."
+# 8. Package the .app bundle only (no DMG yet — we need to patch before creating the DMG)
+echo "Packaging Luke Agents (.app)..."
 cd "$ELECTRON_DIR"
-npx electron-builder --mac --arm64 --config electron-builder-luke.yml
+CSC_IDENTITY_AUTO_DISCOVERY=false npx electron-builder --mac --arm64 --config electron-builder-luke.yml --dir
 
 # 9. Patch the packaged app's app name so Electron uses a separate userData dir and instance lock
 # This lets Luke Agents run alongside official Craft Agents simultaneously.
@@ -123,31 +124,51 @@ else
   echo "WARNING: Could not find packaged main.cjs to patch"
 fi
 
-# 10. Re-sign after patching (ad-hoc, since we modified the binary)
-codesign --force --deep --sign - "$ELECTRON_DIR/release/mac-arm64/Luke Agents.app" 2>/dev/null || true
+# 10. Re-sign after patching (ad-hoc, inside-out — frameworks first, then helpers, then main app)
+#     Note: --deep is unreliable for Electron apps and leaves Sealed Resources inconsistent.
+APP="$ELECTRON_DIR/release/mac-arm64/Luke Agents.app"
 
-# 11. Clean up temp config
+# Remove old signatures
+find "$APP" -name "_CodeSignature" -type d -exec rm -rf {} + 2>/dev/null
+
+# Sign frameworks
+for fw in "$APP/Contents/Frameworks/"*.framework; do
+  codesign --force --sign - "$fw" 2>/dev/null || true
+done
+
+# Sign helper apps
+for helper in "$APP/Contents/Frameworks/"*.app; do
+  codesign --force --sign - "$helper" 2>/dev/null || true
+done
+
+# Sign main app bundle last
+codesign --force --sign - "$APP" 2>/dev/null || true
+
+# 11. Create the DMG from the patched+signed .app
+echo "Creating DMG..."
+DMG_PATH="$ELECTRON_DIR/release/Luke-Agents-arm64.dmg"
+rm -f "$DMG_PATH"
+hdiutil create -volname "Luke Agents" -srcfolder "$APP" -ov -format UDZO "$DMG_PATH"
+
+# 12. Clean up temp config
 rm -f "$ELECTRON_DIR/electron-builder-luke.yml"
 
-# 12. Done
-DMG_PATH="$ELECTRON_DIR/release/Luke-Agents-arm64.dmg"
+# 13. Done
 if [ -f "$DMG_PATH" ]; then
   echo ""
   echo "=== Build Complete ==="
   echo "DMG: $DMG_PATH"
+  echo "App: $APP"
   echo "Size: $(du -h "$DMG_PATH" | cut -f1)"
   echo ""
-  echo "Data directory: ~/.luke-agents"
   echo "Install: Open the DMG and drag to Applications"
+  echo "  — OR copy directly: cp -R \"$APP\" /Applications/"
   echo ""
   echo "IMPORTANT: After installing, remove macOS quarantine:"
   echo "  xattr -cr /Applications/Luke\\ Agents.app"
   echo ""
-  echo "First run: Your workspaces/sources/preferences will be empty."
-  echo "To copy your existing config:"
-  echo "  cp -r ~/.craft-agent/* ~/.luke-agents/"
+  echo "Data directory: ~/.craft-agent (shared with Craft Agents)"
 else
-  echo "ERROR: DMG not found at $DMG_PATH"
-  ls -la "$ELECTRON_DIR/release/" 2>/dev/null
+  echo "ERROR: DMG creation failed"
   exit 1
 fi
