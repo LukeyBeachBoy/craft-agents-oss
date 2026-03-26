@@ -68,3 +68,4 @@ credentials.enc
 # act (local GitHub Actions runner)
 .secrets
 .actrc
+apps/electron/resources/pi-agent-server/
