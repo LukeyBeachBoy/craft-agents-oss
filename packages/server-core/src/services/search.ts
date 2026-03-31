@@ -226,7 +226,7 @@ export async function searchSessions(
     // 2. Requires the query to appear somewhere in the line
     // This filters at ripgrep level, avoiding 70x more data being sent to Node.js
     const escapedQuery = escapeRegex(query);
-    args.push('-e', `^\\{"id":"[^"]*","type":"(user|assistant)".*${escapedQuery}`);
+    args.push('-e', `^\\{"id":"[^"]*".*${escapedQuery}.*"type":"(user|assistant)"`);
     args.push(sessionsDir);
 
     // Cancel previous search if still running (user typed new query)
