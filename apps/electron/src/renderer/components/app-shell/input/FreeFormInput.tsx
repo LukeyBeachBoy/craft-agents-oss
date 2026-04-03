@@ -2140,7 +2140,7 @@ Model
                         onSelect={() => onModelChange(modelId, effectiveConnection)}
                         className="flex items-center justify-between px-2 py-2 rounded-lg cursor-pointer"
                       >
-                        <div className="text-left">
+                        <div className="text-left flex-1 min-w-0">
                           <div className="font-medium text-sm">{modelName}</div>
                           {description && (
                             <div className="text-xs text-muted-foreground">{description}</div>

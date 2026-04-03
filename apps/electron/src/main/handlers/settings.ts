@@ -11,7 +11,8 @@ export const GUI_HANDLED_CHANNELS = [
   RPC_CHANNELS.copilot.CLEAR_BILLING_PAT,
 ] as const
 
-// =====================================================// Copilot Premium Request Usage
+// =====================================================
+// Copilot Premium Request Usage
 // =====================================================
 interface PremiumUsageResult {
   used: number
@@ -25,28 +26,28 @@ interface PremiumUsageResult {
 }
 
 let usageCache: { result: PremiumUsageResult; timestamp: number } | null = null
-const CACHE_TTL_MS = 30 * 1000 // 30 seconds
-
-async function fetchPremiumUsage(): Promise<PremiumUsageResult> {
-  // Read PAT from config file or env var
-  let pat = process.env.GITHUB_BILLING_PAT
-  try {
-    const os = await import('os')
-    const fs = await import('fs')
-    const path = await import('path')
-    const configPath = path.join(os.homedir(), '.craft-agent', 'github-billing.json')
-    const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
-    if (!pat) pat = config.pat
-  } catch { /* file doesn't exist or is invalid */ }
 const CACHE_TTL_MS = 30 * 1000       // 30 seconds for successful results
 const ERROR_CACHE_TTL_MS = 10 * 1000 // 10 seconds for error results (avoid spamming GitHub)
 
 async function fetchPremiumUsage(): Promise<PremiumUsageResult> {
-  // Read PAT from env var or secure credential store (never plaintext file)
+  // Read PAT: env var → secure credential store → legacy JSON file (migration fallback)
   let pat = process.env.GITHUB_BILLING_PAT
   if (!pat) {
     const manager = getCredentialManager()
     pat = await manager.getLlmApiKey('__copilot-billing') ?? undefined
+  }
+  if (!pat) {
+    // Backward-compat: read from the legacy ~/.craft-agent/github-billing.json file.
+    // Users who set up PAT before the credential-manager migration still have it here.
+    // Once they use the "Set PAT" button in the UI, the JSON file is no longer needed.
+    try {
+      const os = await import('os')
+      const fs = await import('fs')
+      const path = await import('path')
+      const configPath = path.join(os.homedir(), '.craft-agent', 'github-billing.json')
+      const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
+      if (config.pat) pat = config.pat
+    } catch { /* file doesn't exist — that's fine */ }
   }
   if (!pat) {
     return { used: 0, limit: 0, percentRemaining: 100, resetDate: '', error: 'No GitHub billing PAT configured' }
@@ -59,8 +60,7 @@ async function fetchPremiumUsage(): Promise<PremiumUsageResult> {
   }
 
   try {
-    // Use the same internal API that VS Code uses — returns exact quota snapshots
-    const res = await fetch('https://api.github.com/copilot_internal/user', { headers })
+    // Use the same internal API that VS Code uses — returns exact quota snapshots.
     // WARNING: This is an undocumented internal GitHub API (used by VS Code's Copilot
     // extension). There is no public/stable alternative for fetching premium quota
     // snapshots. It could break without notice on any GitHub deployment. Monitor for
@@ -108,7 +108,6 @@ async function fetchPremiumUsage(): Promise<PremiumUsageResult> {
       limit: 0,
       percentRemaining: 100,
       resetDate: '',
-      error: err instanceof Error ? err.message : 'Unknown error',
       error: err instanceof Error
         ? (err.name === 'AbortError' ? 'Request timed out' : err.message)
         : 'Unknown error',
@@ -116,22 +115,12 @@ async function fetchPremiumUsage(): Promise<PremiumUsageResult> {
   }
 }
 
-// =====================================================// GUI-only settings (require Electron-specific APIs)
+// =====================================================
+// GUI-only settings (require Electron-specific APIs)
 // =====================================================
 export function registerSettingsGuiHandlers(server: RpcServer, _deps: HandlerDeps): void {
   // Copilot premium request usage (personal feature — reads GITHUB_BILLING_PAT env)
   server.handle(RPC_CHANNELS.copilot.GET_PREMIUM_USAGE, async () => {
-    // Check cache
-    if (usageCache && Date.now() - usageCache.timestamp < CACHE_TTL_MS) {
-      return usageCache.result
-    }
-    const result = await fetchPremiumUsage()
-    if (!result.error) {
-      usageCache = { result, timestamp: Date.now() }
-    }
-    return result
-  })
-
     // Check cache — use shorter TTL for errors to avoid spamming GitHub on every poll
     if (usageCache) {
       const ttl = usageCache.result.error ? ERROR_CACHE_TTL_MS : CACHE_TTL_MS

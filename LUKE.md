@@ -151,9 +151,9 @@ The premium request indicator requires a GitHub fine-grained PAT with **Plan (re
    - Token name: anything (e.g. "Luke Agents")
    - Expiration: your preference
    - Account permissions → **Plan**: Read-only
-2. Save it:
+2. In the app, click the **ⓘ** icon next to the model selector → **Set PAT** → paste your token.
+   This stores it securely in the macOS Keychain.
 
-```bash
-echo '{"pat": "github_pat_..."}' > ~/.craft-agent/github-billing.json
-chmod 600 ~/.craft-agent/github-billing.json
-```
+> **Legacy method (still works):** If you previously saved the PAT to `~/.craft-agent/github-billing.json`,
+> the app will still read it from there as a fallback. To migrate to the Keychain, just use the
+> "Set PAT" button above and delete the old file.
