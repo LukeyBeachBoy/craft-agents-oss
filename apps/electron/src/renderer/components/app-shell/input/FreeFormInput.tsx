@@ -311,16 +311,7 @@ export function FreeFormInput({
   }, [currentConnection, workspaceDefaultConnection, llmConnections])
 
   const withCopilotAutoModel = React.useCallback((conn: { piAuthProvider?: string; models?: unknown[] }) => {
-    const baseModels = (conn.models as typeof ANTHROPIC_MODELS | undefined) || ANTHROPIC_MODELS
-    if (conn.piAuthProvider !== 'github-copilot') return baseModels
-
-    const hasAuto = baseModels.some(m => typeof m !== 'string' && m.id === 'auto')
-    if (hasAuto) return baseModels
-
-    return [
-      { id: 'auto', name: 'Auto', shortName: 'Auto', description: '', provider: 'pi' as const, contextWindow: 200_000, supportsThinking: false },
-      ...baseModels,
-    ]
+    return (conn.models as typeof ANTHROPIC_MODELS | undefined) || ANTHROPIC_MODELS
   }, [])
 
   // Compute available models from the effective connection.
