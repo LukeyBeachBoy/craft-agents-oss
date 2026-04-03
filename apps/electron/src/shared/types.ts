@@ -1,11 +1,11 @@
-// =============================================================================
+// ======================================================================
 // Protocol re-exports (channels, DTOs, events, wire types)
-// =============================================================================
+// ======================================================================
 export * from '@craft-agent/shared/protocol'
 
-// =============================================================================
+// ======================================================================
 // Package re-exports (convenience for renderer imports)
-// =============================================================================
+// ======================================================================
 
 // Core types
 import type {
@@ -67,9 +67,9 @@ export type { LoadedSkill, SkillMetadata };
 import type { LlmConnection, LlmConnectionWithStatus, LlmAuthType, LlmProviderType, NetworkProxySettings } from '@craft-agent/shared/config';
 export type { LlmConnection, LlmConnectionWithStatus, LlmAuthType, LlmProviderType, NetworkProxySettings };
 
-// =============================================================================
+// ======================================================================
 // GUI-only types (not used by server/handler code)
-// =============================================================================
+// ======================================================================
 
 /**
  * Browser toolbar window IPC channels (preload <-> BrowserPaneManager).
@@ -164,9 +164,9 @@ export interface TransportConnectionState {
   updatedAt: number
 }
 
-// =============================================================================
+// ======================================================================
 // ElectronAPI — type-safe IPC API exposed to renderer
-// =============================================================================
+// ======================================================================
 
 // Re-import types for ElectronAPI
 import type { WorkspaceInfo, Workspace, SessionMetadata, StoredAttachment as StoredAttachmentType } from '@craft-agent/core/types';
@@ -397,6 +397,11 @@ export interface ElectronAPI {
   copilotLogout(connectionSlug: string): Promise<{ success: boolean }>
   onCopilotDeviceCode(callback: (data: { userCode: string; verificationUri: string }) => void): () => void
   getCopilotPremiumUsage(): Promise<{ used: number; limit: number; percentRemaining: number; resetDate: string; plan?: string; unlimited?: boolean; overageEnabled?: boolean; error?: string }>
+
+
+  setCopilotBillingPat(pat: string): Promise<{ success: boolean; error?: string }>
+  clearCopilotBillingPat(): Promise<{ success: boolean }>
+
 
   /** Unified LLM connection setup */
   setupLlmConnection(setup: LlmConnectionSetup): Promise<{ success: boolean; error?: string }>
@@ -631,9 +636,9 @@ export interface ElectronAPI {
   onAutomationsChanged(callback: (workspaceId: string) => void): () => void
 }
 
-// =============================================================================
+// ======================================================================
 // Navigation types (renderer-only)
-// =============================================================================
+// ======================================================================
 
 /**
  * Right sidebar panel types

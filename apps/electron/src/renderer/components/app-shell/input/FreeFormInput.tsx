@@ -310,6 +310,19 @@ export function FreeFormInput({
     return conn.defaultModel ?? null
   }, [currentConnection, workspaceDefaultConnection, llmConnections])
 
+  const withCopilotAutoModel = React.useCallback((conn: { piAuthProvider?: string; models?: unknown[] }) => {
+    const baseModels = (conn.models as typeof ANTHROPIC_MODELS | undefined) || ANTHROPIC_MODELS
+    if (conn.piAuthProvider !== 'github-copilot') return baseModels
+
+    const hasAuto = baseModels.some(m => typeof m !== 'string' && m.id === 'auto')
+    if (hasAuto) return baseModels
+
+    return [
+      { id: 'auto', name: 'Auto', shortName: 'Auto', description: '', provider: 'pi' as const, contextWindow: 200_000, supportsThinking: false },
+      ...baseModels,
+    ]
+  }, [])
+
   // Compute available models from the effective connection.
   // All connections have models populated by backfillAllConnectionModels().
   const availableModels = React.useMemo(() => {
@@ -324,8 +337,8 @@ export function FreeFormInput({
       return ANTHROPIC_MODELS // Safety net — shouldn't happen
     }
 
-    return connection.models || ANTHROPIC_MODELS
-  }, [llmConnections, currentConnection, workspaceDefaultConnection, connectionUnavailable])
+    return withCopilotAutoModel(connection)
+  }, [llmConnections, currentConnection, workspaceDefaultConnection, connectionUnavailable, withCopilotAutoModel])
 
   const availableThinkingLevels = THINKING_LEVELS
 
@@ -408,7 +421,12 @@ export function FreeFormInput({
       try {
         const result = await window.electronAPI.getCopilotPremiumUsage()
         if (!cancelled) setCopilotUsage(result)
-      } catch { /* silently fail */ }
+} catch (err) {
+        if (!cancelled) setCopilotUsage({
+          used: 0, limit: 0, percentRemaining: 100, resetDate: '',
+          error: err instanceof Error ? err.message : 'Failed to fetch usage',
+        })
+      }
     }
     fetchUsage()
     const interval = setInterval(fetchUsage, 60 * 1000) // poll every 60s
@@ -1943,7 +1961,7 @@ export function FreeFormInput({
                                 <div>Premium requests: {copilotUsage.used} of {copilotUsage.limit} used ({Math.round(100 - copilotUsage.percentRemaining)}%)</div>
                                 {copilotUsage.plan && <div className="text-muted-foreground capitalize">Plan: Copilot {copilotUsage.plan}</div>}
                                 {copilotUsage.overageEnabled && <div className="text-muted-foreground">Overages enabled</div>}
-                                {copilotUsage.resetDate && <div className="text-muted-foreground">Resets {new Date(copilotUsage.resetDate).toLocaleDateString('en-GB', { month: 'short', day: 'numeric' })}</div>}
+{copilotUsage.resetDate && <div className="text-muted-foreground">Resets {new Date(copilotUsage.resetDate).toLocaleDateString('en-GB', { month: 'short', day: 'numeric' })}</div>}
                               </div>
                             </TooltipContent>
                           </Tooltip>
@@ -1960,12 +1978,41 @@ export function FreeFormInput({
                               <p className="text-muted-foreground">
                                 To see your premium request usage, add a GitHub fine-grained PAT with <span className="font-medium text-foreground">Copilot (read)</span> permission.
                               </p>
-                              <p className="text-muted-foreground">
-                                Ask me to set it up:
-                              </p>
-                              <code className="block bg-muted rounded px-2 py-1.5 text-[11px] select-all">
-                                Save my GitHub PAT for the copilot usage indicator: github_pat_...
-                              </code>
+                              <form
+                                className="flex gap-1.5"
+                                onSubmit={async (e) => {
+                                  e.preventDefault()
+                                  const input = (e.currentTarget.elements.namedItem('pat') as HTMLInputElement)
+                                  const pat = input.value.trim()
+                                  if (!pat) return
+                                  try {
+                                    const result = await window.electronAPI.setCopilotBillingPat(pat)
+                                    if (!result.success) {
+                                      toast.error(result.error ?? 'Failed to save GitHub PAT')
+                                      return
+                                    }
+                                    input.value = ''
+                                    toast.success('GitHub PAT saved')
+                                    setCopilotUsageRefreshKey(k => k + 1) // trigger immediate usage refresh
+                                  } catch (err) {
+                                    toast.error(err instanceof Error ? err.message : 'Failed to save GitHub PAT')
+                                  }
+                                }}
+                              >
+                                <input
+                                  name="pat"
+                                  type="password"
+                                  placeholder="github_pat_..."
+                                  autoComplete="off"
+                                  className="flex-1 min-w-0 rounded border border-border bg-background px-2 py-1 text-[11px] font-mono outline-none focus:ring-1 focus:ring-ring"
+                                />
+                                <button
+                                  type="submit"
+                                  className="shrink-0 rounded bg-primary px-2 py-1 text-[11px] text-primary-foreground hover:bg-primary/90"
+                                >
+                                  Save
+                                </button>
+                              </form>
                             </PopoverContent>
                           </Popover>
                         )}
@@ -2035,7 +2082,7 @@ Model
                           {isAuthenticated && (
                             <StyledDropdownMenuSubContent className="min-w-[220px]">
                               {/* Show models for this connection - use provider-specific models as fallback */}
-                              {(conn.models || ANTHROPIC_MODELS).map((model) => {
+                              {withCopilotAutoModel(conn).map((model) => {
                                 const modelId = typeof model === 'string' ? model : model.id
                                 const modelName = typeof model === 'string' ? stripPiPrefixForDisplay(getModelShortName(model)) : model.name
                                 const isSelectedModel = isCurrentConnection && currentModel === modelId
