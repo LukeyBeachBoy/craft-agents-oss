@@ -310,6 +310,19 @@ export function FreeFormInput({
     return conn.defaultModel ?? null
   }, [currentConnection, workspaceDefaultConnection, llmConnections])
 
+  const withCopilotAutoModel = React.useCallback((conn: { piAuthProvider?: string; models?: unknown[] }) => {
+    const baseModels = (conn.models as typeof ANTHROPIC_MODELS | undefined) || ANTHROPIC_MODELS
+    if (conn.piAuthProvider !== 'github-copilot') return baseModels
+
+    const hasAuto = baseModels.some(m => typeof m !== 'string' && m.id === 'auto')
+    if (hasAuto) return baseModels
+
+    return [
+      { id: 'auto', name: 'Auto', shortName: 'Auto', description: '', provider: 'pi' as const, contextWindow: 200_000, supportsThinking: false },
+      ...baseModels,
+    ]
+  }, [])
+
   // Compute available models from the effective connection.
   // All connections have models populated by backfillAllConnectionModels().
   const availableModels = React.useMemo(() => {
@@ -324,18 +337,8 @@ export function FreeFormInput({
       return ANTHROPIC_MODELS // Safety net — shouldn't happen
     }
 
-    const models = connection.models || ANTHROPIC_MODELS
-    // For GitHub Copilot, always surface 'auto' at the top — it may not be
-    // returned by the /models API with policy.state==='enabled' even though
-    // it's a valid model that gives a 10% discount on premium requests.
-    if (connection.piAuthProvider === 'github-copilot' && !models.some(m => typeof m !== 'string' && m.id === 'auto')) {
-      return [
-        { id: 'auto', name: 'Auto', shortName: 'Auto', description: '', provider: 'pi' as const, contextWindow: 200_000, supportsThinking: false },
-        ...models,
-      ]
-    }
-    return models
-  }, [llmConnections, currentConnection, workspaceDefaultConnection, connectionUnavailable])
+    return withCopilotAutoModel(connection)
+  }, [llmConnections, currentConnection, workspaceDefaultConnection, connectionUnavailable, withCopilotAutoModel])
 
   const availableThinkingLevels = THINKING_LEVELS
 
@@ -2079,7 +2082,7 @@ Model
                           {isAuthenticated && (
                             <StyledDropdownMenuSubContent className="min-w-[220px]">
                               {/* Show models for this connection - use provider-specific models as fallback */}
-                              {(conn.models || ANTHROPIC_MODELS).map((model) => {
+                              {withCopilotAutoModel(conn).map((model) => {
                                 const modelId = typeof model === 'string' ? model : model.id
                                 const modelName = typeof model === 'string' ? stripPiPrefixForDisplay(getModelShortName(model)) : model.name
                                 const isSelectedModel = isCurrentConnection && currentModel === modelId
