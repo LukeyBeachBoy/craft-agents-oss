@@ -736,17 +736,23 @@ function AppShellContent({
   // Ref for ChatDisplay navigation (exposed via forwardRef)
   const chatDisplayRef = React.useRef<ChatDisplayHandle>(null)
   // Track match count and index from ChatDisplay (for SessionList navigation UI)
-  const [chatMatchInfo, setChatMatchInfo] = React.useState<{ count: number; index: number }>({ count: 0, index: 0 })
+  const [chatMatchInfo, setChatMatchInfo] = React.useState<{ sessionId: string | null; count: number; index: number; isHighlighting?: boolean }>({ sessionId: null, count: 0, index: 0 })
 
   // Callback for immediate match info updates from ChatDisplay
-  const handleChatMatchInfoChange = React.useCallback((info: { count: number; index: number }) => {
-    setChatMatchInfo(info)
+  // Memo guard prevents render feedback loops from identical updates
+  const handleChatMatchInfoChange = React.useCallback((info: { sessionId: string | null; count: number; index: number; isHighlighting: boolean }) => {
+    setChatMatchInfo(prev => {
+      if (prev.sessionId === info.sessionId && prev.count === info.count && prev.index === info.index && prev.isHighlighting === info.isHighlighting) {
+        return prev
+      }
+      return info
+    })
   }, [])
 
   // Reset match info when search is deactivated
   React.useEffect(() => {
     if (!searchActive || !searchQuery) {
-      setChatMatchInfo({ count: 0, index: 0 })
+      setChatMatchInfo({ sessionId: null, count: 0, index: 0 })
     }
   }, [searchActive, searchQuery])
 
@@ -1569,6 +1575,7 @@ function AppShellContent({
     sessionStatuses: effectiveSessionStatuses,
     onSessionSourcesChange: handleSessionSourcesChange,
     rightSidebarButton: null,
+    isCompactMode: isAutoCompact,
     // Search state for ChatDisplay highlighting
     sessionListSearchQuery: searchActive ? searchQuery : undefined,
     isSearchModeActive: searchActive,
@@ -1581,7 +1588,7 @@ function AppShellContent({
     automationTestResults,
     getAutomationHistory,
     onReplayAutomation: handleReplayAutomation,
-  }), [contextValue, handleDeleteSession, sources, skills, activeSessionWorkingDirectory, displayLabelConfigs, handleSessionLabelsChange, enabledModes, effectiveSessionStatuses, handleSessionSourcesChange, searchActive, searchQuery, handleChatMatchInfoChange, handleTestAutomation, handleToggleAutomation, handleDuplicateAutomation, handleDeleteAutomation, automationTestResults, getAutomationHistory, handleReplayAutomation])
+  }), [contextValue, handleDeleteSession, sources, skills, activeSessionWorkingDirectory, displayLabelConfigs, handleSessionLabelsChange, enabledModes, effectiveSessionStatuses, handleSessionSourcesChange, isAutoCompact, searchActive, searchQuery, handleChatMatchInfoChange, handleTestAutomation, handleToggleAutomation, handleDuplicateAutomation, handleDeleteAutomation, automationTestResults, getAutomationHistory, handleReplayAutomation])
 
   // Persist expanded folders to localStorage (workspace-scoped)
   React.useEffect(() => {
@@ -3206,6 +3213,7 @@ function AppShellContent({
                   focusedSessionId={panelCount === 0 ? null : panelCount > 1 ? focusedSessionId : undefined}
                   onNavigateToSession={panelCount > 1 ? navigateToSessionInPanel : undefined}
                   hasPendingPrompt={hasPendingPrompt}
+                  activeChatMatchInfo={chatMatchInfo}
                 />
               </>
             )}
