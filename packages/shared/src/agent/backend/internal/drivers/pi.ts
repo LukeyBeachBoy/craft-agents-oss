@@ -107,10 +107,6 @@ const EXCLUDED_MODEL_PREFIXES = ['gpt-4', 'gpt-3.5'];
  * These are special routing/meta models that may lack a `policy` field.
  */
 const COPILOT_BUILTIN_MODELS: RawCopilotModel[] = [
-  // "Auto" lets Copilot pick the best model per request and gives a 10%
-  // discount on premium-request usage. It is a first-class option in VS Code
-  // but may not appear in the /models endpoint with a standard policy state.
-  { id: 'auto', name: 'Auto' },
 ];
 
 /** Filter raw models to only those explicitly enabled by policy, excluding legacy models. */
