@@ -624,66 +624,25 @@ export function getDefaultAuthType(provider: AgentProvider): LlmAuthType | undef
  * @param connection - The LLM connection config (has defaultModel and models[])
  * @returns Resolved model ID string
  */
-type ConnectionModelLike = { id: string; name?: string; shortName?: string } | string;
-
-function getConnectionModelId(model: ConnectionModelLike): string {
-  return typeof model === 'string' ? model : model.id;
-}
-
-function getConnectionModelSearchText(model: ConnectionModelLike): string {
-  if (typeof model === 'string') return model.toLowerCase();
-  return `${model.id} ${model.name ?? ''} ${model.shortName ?? ''}`.toLowerCase();
-}
-
-function normalizeRequestedModelForConnection(
-  requestedModel: string | undefined,
-  connection: LlmConnection | null,
-): string | undefined {
-  const trimmed = requestedModel?.trim();
-  if (!trimmed) return undefined;
-
-  const models = connection?.models;
-  if (!models || models.length === 0) {
-    // No model list to validate against — keep caller-provided model.
-    return trimmed;
-  }
-
-  // 1) Exact ID match (case-insensitive)
-  const exact = models.find((m) => getConnectionModelId(m).toLowerCase() === trimmed.toLowerCase());
-  if (exact) return getConnectionModelId(exact);
-
-  // 2) Human shorthand aliases used by UI/tooling
-  const alias = trimmed.toLowerCase();
-  if (alias === 'haiku' || alias === 'sonnet' || alias === 'opus') {
-    const aliased = models.find((m) => getConnectionModelSearchText(m).includes(alias));
-    if (aliased) return getConnectionModelId(aliased);
-  }
-
-  // 3) Unknown/unsupported for this connection: force fallback to connection default
-  return undefined;
-}
-
 export function resolveModelForProvider(
   provider: AgentProvider,
   managedModel: string | undefined,
   connection: LlmConnection | null
 ): string {
-  let resolvedManagedModel = normalizeRequestedModelForConnection(managedModel, connection);
-
   // Cross-provider guard: if the model belongs to a different provider, fall back
   // to the connection's default. This prevents e.g. sending a Claude model to Pi.
-  if (resolvedManagedModel) {
-    const modelProvider = getModelProvider(resolvedManagedModel);
+  if (managedModel) {
+    const modelProvider = getModelProvider(managedModel);
     if (modelProvider && modelProvider !== provider) {
-      resolvedManagedModel = undefined; // Clear — will fall through to connection default
+      managedModel = undefined; // Clear — will fall through to connection default
     }
   }
 
   switch (provider) {
     case 'pi':
-      return resolvedManagedModel || connection?.defaultModel || '';
+      return managedModel || connection?.defaultModel || '';
     default:
-      return resolvedManagedModel || connection?.defaultModel || DEFAULT_MODEL;
+      return managedModel || connection?.defaultModel || DEFAULT_MODEL;
   }
 }
 

@@ -143,12 +143,6 @@ export const CHANNEL_MAP = {
   getCopilotAuthStatus: invoke(RPC_CHANNELS.copilot.GET_AUTH_STATUS),
   copilotLogout: invoke(RPC_CHANNELS.copilot.LOGOUT),
   onCopilotDeviceCode: listener(RPC_CHANNELS.copilot.DEVICE_CODE),
-  getCopilotPremiumUsage: invoke(RPC_CHANNELS.copilot.GET_PREMIUM_USAGE),
-
-
-  setCopilotBillingPat: invoke(RPC_CHANNELS.copilot.SET_BILLING_PAT),
-  clearCopilotBillingPat: invoke(RPC_CHANNELS.copilot.CLEAR_BILLING_PAT),
-
 
   // Server info (REMOTE_ELIGIBLE)
   getServerHomeDir: invoke(RPC_CHANNELS.server.HOME_DIR),
@@ -370,6 +364,7 @@ export const CHANNEL_MAP = {
   setWorkspaceDefaultLlmConnection: invoke(RPC_CHANNELS.llmConnections.SET_WORKSPACE_DEFAULT),
 
   // Automations
+  getAutomations: invoke(RPC_CHANNELS.automations.GET),
   testAutomation: invoke(RPC_CHANNELS.automations.TEST),
   setAutomationEnabled: invoke(RPC_CHANNELS.automations.SET_ENABLED),
   duplicateAutomation: invoke(RPC_CHANNELS.automations.DUPLICATE),
@@ -378,4 +373,8 @@ export const CHANNEL_MAP = {
   getAutomationLastExecuted: invoke(RPC_CHANNELS.automations.GET_LAST_EXECUTED),
   replayAutomation: invoke(RPC_CHANNELS.automations.REPLAY),
   onAutomationsChanged: listener(RPC_CHANNELS.automations.CHANGED),
+
+  // Resources (cross-workspace export/import)
+  exportResources: invoke(RPC_CHANNELS.resources.EXPORT),
+  importResources: invoke(RPC_CHANNELS.resources.IMPORT),
 } satisfies ChannelMap

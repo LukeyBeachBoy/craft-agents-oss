@@ -24,7 +24,6 @@ import {
   createBackendFromConnection,
   testBackendConnection,
   validateStoredBackendConnection,
-  resolveModelForProvider,
 } from '../factory.ts';
 import type { BackendConfig } from '../types.ts';
 import type { Workspace, LlmConnection } from '../../../config/storage.ts';
@@ -338,43 +337,6 @@ describe('phase4 backend abstraction APIs', () => {
 
     expect(result.success).toBe(false);
     expect(result.error).toBe('API key is required');
-  });
-});
-
-describe('resolveModelForProvider', () => {
-  it('maps shorthand "haiku" to a supported PI connection model', () => {
-    const connection: LlmConnection = {
-      slug: 'github-copilot',
-      name: 'GitHub Copilot',
-      providerType: 'pi',
-      authType: 'oauth',
-      createdAt: Date.now(),
-      defaultModel: 'claude-opus-4.6',
-      models: [
-        { id: 'claude-opus-4.6', name: 'Claude Opus 4.6', shortName: 'Claude Opus 4.6', description: '', provider: 'pi', contextWindow: 200000 },
-        { id: 'claude-haiku-4.5', name: 'Claude Haiku 4.5', shortName: 'Claude Haiku 4.5', description: '', provider: 'pi', contextWindow: 200000 },
-      ],
-    };
-
-    expect(resolveModelForProvider('pi', 'haiku', connection)).toBe('claude-haiku-4.5');
-  });
-
-  it('falls back to connection default when requested model is unsupported', () => {
-    const connection: LlmConnection = {
-      slug: 'github-copilot',
-      name: 'GitHub Copilot',
-      providerType: 'pi',
-      authType: 'oauth',
-      createdAt: Date.now(),
-      defaultModel: 'claude-opus-4.6',
-      models: [
-        { id: 'claude-opus-4.6', name: 'Claude Opus 4.6', shortName: 'Claude Opus 4.6', description: '', provider: 'pi', contextWindow: 200000 },
-        { id: 'claude-sonnet-4.6', name: 'Claude Sonnet 4.6', shortName: 'Claude Sonnet 4.6', description: '', provider: 'pi', contextWindow: 200000 },
-      ],
-    };
-
-    expect(resolveModelForProvider('pi', 'haiku', connection)).toBe('claude-opus-4.6');
-    expect(resolveModelForProvider('pi', 'totally-unknown-model', connection)).toBe('claude-opus-4.6');
   });
 });
 

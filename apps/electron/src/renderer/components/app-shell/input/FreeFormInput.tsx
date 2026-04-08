@@ -10,7 +10,6 @@ import {
   DatabaseZap,
   ChevronDown,
   AlertCircle,
-  Info,
   X,
 } from 'lucide-react'
 import { Icon_Home, Icon_Folder, Spinner } from '@craft-agent/ui'
@@ -310,10 +309,6 @@ export function FreeFormInput({
     return conn.defaultModel ?? null
   }, [currentConnection, workspaceDefaultConnection, llmConnections])
 
-  const withCopilotAutoModel = React.useCallback((conn: { piAuthProvider?: string; models?: unknown[] }) => {
-    return (conn.models as typeof ANTHROPIC_MODELS | undefined) || ANTHROPIC_MODELS
-  }, [])
-
   // Compute available models from the effective connection.
   // All connections have models populated by backfillAllConnectionModels().
   const availableModels = React.useMemo(() => {
@@ -328,8 +323,8 @@ export function FreeFormInput({
       return ANTHROPIC_MODELS // Safety net — shouldn't happen
     }
 
-    return withCopilotAutoModel(connection)
-  }, [llmConnections, currentConnection, workspaceDefaultConnection, connectionUnavailable, withCopilotAutoModel])
+    return connection.models || ANTHROPIC_MODELS
+  }, [llmConnections, currentConnection, workspaceDefaultConnection, connectionUnavailable])
 
   const availableThinkingLevels = THINKING_LEVELS
 
@@ -389,40 +384,6 @@ export function FreeFormInput({
     return llmConnections.find(c => c.slug === effectiveConnection) ?? null
   }, [llmConnections, effectiveConnection])
 
-  // ── Copilot Premium Request Usage ───────────────────────────────────
-  const isCopilotConnection = effectiveConnectionDetails?.piAuthProvider === 'github-copilot'
-  const [copilotUsage, setCopilotUsage] = React.useState<{
-    used: number; limit: number; percentRemaining: number; resetDate: string; plan?: string; unlimited?: boolean; overageEnabled?: boolean; error?: string
-  } | null>(null)
-
-  const [copilotUsageRefreshKey, setCopilotUsageRefreshKey] = React.useState(0)
-  const wasProcessingRef = React.useRef(false)
-  React.useEffect(() => {
-    if (wasProcessingRef.current && !isProcessing) {
-      // Response just completed — trigger a refresh
-      setCopilotUsageRefreshKey(k => k + 1)
-    }
-    wasProcessingRef.current = isProcessing ?? false
-  }, [isProcessing])
-
-  React.useEffect(() => {
-    if (!isCopilotConnection) { setCopilotUsage(null); return }
-    let cancelled = false
-    const fetchUsage = async () => {
-      try {
-        const result = await window.electronAPI.getCopilotPremiumUsage()
-        if (!cancelled) setCopilotUsage(result)
-} catch (err) {
-        if (!cancelled) setCopilotUsage({
-          used: 0, limit: 0, percentRemaining: 100, resetDate: '',
-          error: err instanceof Error ? err.message : 'Failed to fetch usage',
-        })
-      }
-    }
-    fetchUsage()
-    const interval = setInterval(fetchUsage, 60 * 1000) // poll every 60s
-    return () => { cancelled = true; clearInterval(interval) }
-  }, [isCopilotConnection, copilotUsageRefreshKey])
 
   // Access sessionStatuses and onSessionStatusChange from context for the # menu state picker
   const sessionStatuses = appShellCtx?.sessionStatuses ?? []
@@ -1935,78 +1896,6 @@ export function FreeFormInput({
                     ) : (
                       <>
                         {effectiveConnectionDetails && llmConnections.length > 1 && storage.get(storage.KEYS.showConnectionIcons, true) && <ConnectionIcon connection={effectiveConnectionDetails} size={14} showTooltip />}
-                        {copilotUsage && !copilotUsage.error && !copilotUsage.unlimited && copilotUsage.limit > 0 && (
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <span className={cn(
-                                "text-[11px] font-mono tabular-nums shrink-0 pr-1",
-                                copilotUsage.percentRemaining <= 10 ? "text-red-500" :
-                                copilotUsage.percentRemaining <= 25 ? "text-yellow-500" :
-                                "text-muted-foreground/70"
-                              )}>
-                                {Math.round(100 - copilotUsage.percentRemaining)}%
-                              </span>
-                            </TooltipTrigger>
-                            <TooltipContent side="top">
-                              <div className="text-xs">
-                                <div>Premium requests: {copilotUsage.used} of {copilotUsage.limit} used ({Math.round(100 - copilotUsage.percentRemaining)}%)</div>
-                                {copilotUsage.plan && <div className="text-muted-foreground capitalize">Plan: Copilot {copilotUsage.plan}</div>}
-                                {copilotUsage.overageEnabled && <div className="text-muted-foreground">Overages enabled</div>}
-{copilotUsage.resetDate && <div className="text-muted-foreground">Resets {new Date(copilotUsage.resetDate).toLocaleDateString('en-GB', { month: 'short', day: 'numeric' })}</div>}
-                              </div>
-                            </TooltipContent>
-                          </Tooltip>
-                        )}
-                        {isCopilotConnection && copilotUsage?.error && (
-                          <Popover>
-                            <PopoverTrigger asChild>
-                              <button type="button" className="shrink-0 pr-1 text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                                <Info className="h-3.5 w-3.5" />
-                              </button>
-                            </PopoverTrigger>
-                            <PopoverContent side="top" align="end" className="w-80 text-xs space-y-2">
-                              <div className="font-medium text-sm">Copilot Usage Indicator</div>
-                              <p className="text-muted-foreground">
-                                To see your premium request usage, add a GitHub fine-grained PAT with <span className="font-medium text-foreground">Copilot (read)</span> permission.
-                              </p>
-                              <form
-                                className="flex gap-1.5"
-                                onSubmit={async (e) => {
-                                  e.preventDefault()
-                                  const input = (e.currentTarget.elements.namedItem('pat') as HTMLInputElement)
-                                  const pat = input.value.trim()
-                                  if (!pat) return
-                                  try {
-                                    const result = await window.electronAPI.setCopilotBillingPat(pat)
-                                    if (!result.success) {
-                                      toast.error(result.error ?? 'Failed to save GitHub PAT')
-                                      return
-                                    }
-                                    input.value = ''
-                                    toast.success('GitHub PAT saved')
-                                    setCopilotUsageRefreshKey(k => k + 1) // trigger immediate usage refresh
-                                  } catch (err) {
-                                    toast.error(err instanceof Error ? err.message : 'Failed to save GitHub PAT')
-                                  }
-                                }}
-                              >
-                                <input
-                                  name="pat"
-                                  type="password"
-                                  placeholder="github_pat_..."
-                                  autoComplete="off"
-                                  className="flex-1 min-w-0 rounded border border-border bg-background px-2 py-1 text-[11px] font-mono outline-none focus:ring-1 focus:ring-ring"
-                                />
-                                <button
-                                  type="submit"
-                                  className="shrink-0 rounded bg-primary px-2 py-1 text-[11px] text-primary-foreground hover:bg-primary/90"
-                                >
-                                  Save
-                                </button>
-                              </form>
-                            </PopoverContent>
-                          </Popover>
-                        )}
                         {currentModelDisplayName}
                         {!connectionDefaultModel && <ChevronDown className="h-3 w-3 opacity-50 shrink-0" />}
                       </>
@@ -2073,7 +1962,7 @@ Model
                           {isAuthenticated && (
                             <StyledDropdownMenuSubContent className="min-w-[220px]">
                               {/* Show models for this connection - use provider-specific models as fallback */}
-                              {withCopilotAutoModel(conn).map((model) => {
+                              {(conn.models || ANTHROPIC_MODELS).map((model) => {
                                 const modelId = typeof model === 'string' ? model : model.id
                                 const modelName = typeof model === 'string' ? stripPiPrefixForDisplay(getModelShortName(model)) : model.name
                                 const isSelectedModel = isCurrentConnection && currentModel === modelId
@@ -2131,7 +2020,7 @@ Model
                         onSelect={() => onModelChange(modelId, effectiveConnection)}
                         className="flex items-center justify-between px-2 py-2 rounded-lg cursor-pointer"
                       >
-                        <div className="text-left flex-1 min-w-0">
+                        <div className="text-left">
                           <div className="font-medium text-sm">{modelName}</div>
                           {description && (
                             <div className="text-xs text-muted-foreground">{description}</div>
