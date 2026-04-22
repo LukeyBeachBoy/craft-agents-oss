@@ -71,6 +71,8 @@ export interface PanelHeaderProps {
   isRegeneratingTitle?: boolean
 }
 
+import { useAppShellContext } from '@/context/AppShellContext'
+
 /**
  * Standardized panel header with title and actions
  */
@@ -78,7 +80,7 @@ export function PanelHeader({
   title,
   badge,
   titleMenu,
-  leadingAction,
+  leadingAction: leadingActionProp,
   centerButton,
   actions,
   rightSidebarButton,
@@ -87,6 +89,9 @@ export function PanelHeader({
   className,
   isRegeneratingTitle,
 }: PanelHeaderProps) {
+  const { leadingAction: contextLeadingAction } = useAppShellContext()
+  const leadingAction = leadingActionProp ?? contextLeadingAction
+
   // Use context as fallback when prop is not explicitly set.
   // Skip stoplight compensation when leadingAction is present — the back button
   // occupies the space where traffic lights would be.

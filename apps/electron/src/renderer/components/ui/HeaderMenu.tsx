@@ -51,7 +51,7 @@ export function HeaderMenu({ route, children, helpFeature }: HeaderMenuProps) {
       <DropdownMenuTrigger asChild>
         <HeaderIconButton icon={<MoreHorizontal className="h-4 w-4" />} />
       </DropdownMenuTrigger>
-      <StyledDropdownMenuContent align="end">
+      <StyledDropdownMenuContent align="end" collisionPadding={10}>
         {children}
         {children && <StyledDropdownMenuSeparator />}
         <StyledDropdownMenuItem onClick={handleOpenInNewWindow}>
