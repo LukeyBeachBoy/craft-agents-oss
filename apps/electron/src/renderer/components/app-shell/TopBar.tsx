@@ -37,7 +37,7 @@ import {
 import type { MenuItem, MenuSection, SettingsMenuItem } from "../../../shared/menu-schema"
 import { SETTINGS_ICONS } from "../icons/SettingsIcons"
 import { SquarePenRounded } from "../icons/SquarePenRounded"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import { BrowserTabStrip } from "../browser/BrowserTabStrip"
 import type { Workspace } from "../../../shared/types"
 import { WorkspaceSwitcher } from "./WorkspaceSwitcher"
@@ -164,6 +164,8 @@ interface TopBarProps {
   isCompact?: boolean
 }
 
+type MenuState = 'main' | 'edit' | 'view' | 'window' | 'settings' | 'help' | 'debug'
+
 export function TopBar({
   workspaces,
   activeWorkspaceId,
@@ -191,6 +193,7 @@ export function TopBar({
   const { t } = useTranslation()
   const [isDebugMode, setIsDebugMode] = useState(false)
   const [maxVisibleBrowserBadges, setMaxVisibleBrowserBadges] = useState(3)
+  const [menuState, setMenuState] = useState<MenuState>('main')
   const rightSlotRef = useRef<HTMLDivElement | null>(null)
 
   const newChatHotkey = useActionLabel('app.newChat').hotkey
@@ -244,6 +247,264 @@ export function TopBar({
 
   const menuLeftPadding = isMac ? 86 : 12
 
+  const handleOpenSubmenu = useCallback((e: React.MouseEvent, state: MenuState) => {
+    if (isCompact) {
+      e.preventDefault()
+      e.stopPropagation()
+      setMenuState(state)
+    }
+  }, [isCompact])
+
+  const renderMobileSubmenuHeader = (title: string) => (
+    <>
+      <StyledDropdownMenuItem onClick={(e) => { e.preventDefault(); e.stopPropagation(); setMenuState('main'); }}>
+        <Icons.ChevronLeft className="h-3.5 w-3.5" />
+        <span className="font-semibold">{title}</span>
+      </StyledDropdownMenuItem>
+      <StyledDropdownMenuSeparator />
+    </>
+  )
+
+  const renderCraftMenuContent = () => {
+    if (isCompact) {
+      switch (menuState) {
+        case 'edit':
+          return (
+            <>
+              {renderMobileSubmenuHeader(t("menu.edit"))}
+              {EDIT_MENU.items.map((item, index) => renderMenuItem(item, index, actionHandlers, t))}
+            </>
+          )
+        case 'view':
+          return (
+            <>
+              {renderMobileSubmenuHeader(t("menu.view"))}
+              {VIEW_MENU.items.map((item, index) => renderMenuItem(item, index, actionHandlers, t))}
+            </>
+          )
+        case 'window':
+          return (
+            <>
+              {renderMobileSubmenuHeader(t("menu.window"))}
+              {WINDOW_MENU.items.map((item, index) => renderMenuItem(item, index, actionHandlers, t))}
+            </>
+          )
+        case 'settings':
+          return (
+            <>
+              {renderMobileSubmenuHeader(t("sidebar.settings"))}
+              <StyledDropdownMenuItem onClick={onOpenSettings}>
+                <Icons.Settings className="h-3.5 w-3.5" />
+                {t("menu.settings")}
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuSeparator />
+              {SETTINGS_ITEMS.map((item) => {
+                const Icon = SETTINGS_ICONS[item.id]
+                return (
+                  <StyledDropdownMenuItem
+                    key={item.id}
+                    onClick={() => onOpenSettingsSubpage(item.id)}
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                    {t(item.labelKey)}
+                  </StyledDropdownMenuItem>
+                )
+              })}
+            </>
+          )
+        case 'help':
+          return (
+            <>
+              {renderMobileSubmenuHeader(t("menu.help"))}
+              <StyledDropdownMenuItem onClick={() => window.electronAPI.openUrl('https://agents.craft.do/docs')}>
+                <Icons.HelpCircle className="h-3.5 w-3.5" />
+                {t("menu.helpAndDocs")}
+                <Icons.ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuItem onClick={onOpenKeyboardShortcuts}>
+                <Icons.Keyboard className="h-3.5 w-3.5" />
+                {t("menu.keyboardShortcuts")}
+              </StyledDropdownMenuItem>
+            </>
+          )
+        case 'debug':
+          return (
+            <>
+              {renderMobileSubmenuHeader("Debug")}
+              <StyledDropdownMenuItem onClick={() => window.electronAPI.checkForUpdates()}>
+                <Icons.Download className="h-3.5 w-3.5" />
+                Check for Updates
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuItem onClick={() => window.electronAPI.installUpdate()}>
+                <Icons.Download className="h-3.5 w-3.5" />
+                Install Update
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuSeparator />
+              <StyledDropdownMenuItem onClick={() => window.electronAPI.menuToggleDevTools()}>
+                <Icons.Bug className="h-3.5 w-3.5" />
+                Toggle DevTools
+              </StyledDropdownMenuItem>
+            </>
+          )
+        default:
+          return (
+            <>
+              <StyledDropdownMenuItem onClick={onNewChat}>
+                <SquarePenRounded className="h-3.5 w-3.5" />
+                {t("menu.newChat")}
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuSeparator />
+              <StyledDropdownMenuItem onClick={(e) => handleOpenSubmenu(e, 'edit')}>
+                <Icons.Pencil className="h-3.5 w-3.5" />
+                {t("menu.edit")}
+                <Icons.ChevronRight className="h-3.5 w-3.5 ml-auto opacity-50" />
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuItem onClick={(e) => handleOpenSubmenu(e, 'view')}>
+                <Icons.Eye className="h-3.5 w-3.5" />
+                {t("menu.view")}
+                <Icons.ChevronRight className="h-3.5 w-3.5 ml-auto opacity-50" />
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuItem onClick={(e) => handleOpenSubmenu(e, 'window')}>
+                <Icons.AppWindow className="h-3.5 w-3.5" />
+                {t("menu.window")}
+                <Icons.ChevronRight className="h-3.5 w-3.5 ml-auto opacity-50" />
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuSeparator />
+              <StyledDropdownMenuItem onClick={(e) => handleOpenSubmenu(e, 'settings')}>
+                <Icons.Settings className="h-3.5 w-3.5" />
+                {t("sidebar.settings")}
+                <Icons.ChevronRight className="h-3.5 w-3.5 ml-auto opacity-50" />
+              </StyledDropdownMenuItem>
+              <StyledDropdownMenuItem onClick={(e) => handleOpenSubmenu(e, 'help')}>
+                <Icons.HelpCircle className="h-3.5 w-3.5" />
+                {t("menu.help")}
+                <Icons.ChevronRight className="h-3.5 w-3.5 ml-auto opacity-50" />
+              </StyledDropdownMenuItem>
+              {isDebugMode && (
+                <StyledDropdownMenuItem onClick={(e) => handleOpenSubmenu(e, 'debug')}>
+                  <Icons.Bug className="h-3.5 w-3.5" />
+                  Debug
+                  <Icons.ChevronRight className="h-3.5 w-3.5 ml-auto opacity-50" />
+                </StyledDropdownMenuItem>
+              )}
+              <StyledDropdownMenuSeparator />
+              <StyledDropdownMenuItem onClick={() => window.electronAPI.menuQuit()}>
+                <Icons.LogOut className="h-3.5 w-3.5" />
+                {t("menu.quitCraftAgents")}
+              </StyledDropdownMenuItem>
+            </>
+          )
+      }
+    }
+
+    // Desktop view - standard Radix nested poppers
+    return (
+      <>
+        <StyledDropdownMenuItem onClick={onNewChat}>
+          <SquarePenRounded className="h-3.5 w-3.5" />
+          {t("menu.newChat")}
+          {newChatHotkey && <DropdownMenuShortcut className="pl-6">{newChatHotkey}</DropdownMenuShortcut>}
+        </StyledDropdownMenuItem>
+        {onNewWindow && (
+          <StyledDropdownMenuItem onClick={onNewWindow}>
+            <Icons.AppWindow className="h-3.5 w-3.5" />
+            {t("menu.newWindow")}
+            {newWindowHotkey && <DropdownMenuShortcut className="pl-6">{newWindowHotkey}</DropdownMenuShortcut>}
+          </StyledDropdownMenuItem>
+        )}
+
+        <StyledDropdownMenuSeparator />
+
+        {renderMenuSection(EDIT_MENU, actionHandlers, t)}
+        {renderMenuSection(VIEW_MENU, actionHandlers, t)}
+        {renderMenuSection(WINDOW_MENU, actionHandlers, t)}
+
+        <StyledDropdownMenuSeparator />
+
+        <DropdownMenuSub>
+          <StyledDropdownMenuSubTrigger>
+            <Icons.Settings className="h-3.5 w-3.5" />
+            {t("sidebar.settings")}
+          </StyledDropdownMenuSubTrigger>
+          <StyledDropdownMenuSubContent>
+            <StyledDropdownMenuItem onClick={onOpenSettings}>
+              <Icons.Settings className="h-3.5 w-3.5" />
+              {t("menu.settings")}
+              {settingsHotkey && <DropdownMenuShortcut className="pl-6">{settingsHotkey}</DropdownMenuShortcut>}
+            </StyledDropdownMenuItem>
+            <StyledDropdownMenuSeparator />
+            {SETTINGS_ITEMS.map((item) => {
+              const Icon = SETTINGS_ICONS[item.id]
+              return (
+                <StyledDropdownMenuItem
+                  key={item.id}
+                  onClick={() => onOpenSettingsSubpage(item.id)}
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                  {t(item.labelKey)}
+                </StyledDropdownMenuItem>
+              )
+            })}
+          </StyledDropdownMenuSubContent>
+        </DropdownMenuSub>
+
+        <DropdownMenuSub>
+          <StyledDropdownMenuSubTrigger>
+            <Icons.HelpCircle className="h-3.5 w-3.5" />
+            {t("menu.help")}
+          </StyledDropdownMenuSubTrigger>
+          <StyledDropdownMenuSubContent>
+            <StyledDropdownMenuItem onClick={() => window.electronAPI.openUrl('https://agents.craft.do/docs')}>
+              <Icons.HelpCircle className="h-3.5 w-3.5" />
+              {t("menu.helpAndDocs")}
+              <Icons.ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+            </StyledDropdownMenuItem>
+            <StyledDropdownMenuItem onClick={onOpenKeyboardShortcuts}>
+              <Icons.Keyboard className="h-3.5 w-3.5" />
+              {t("menu.keyboardShortcuts")}
+              {keyboardShortcutsHotkey && <DropdownMenuShortcut className="pl-6">{keyboardShortcutsHotkey}</DropdownMenuShortcut>}
+            </StyledDropdownMenuItem>
+          </StyledDropdownMenuSubContent>
+        </DropdownMenuSub>
+
+        {isDebugMode && (
+          <>
+            <DropdownMenuSub>
+              <StyledDropdownMenuSubTrigger>
+                <Icons.Bug className="h-3.5 w-3.5" />
+                Debug
+              </StyledDropdownMenuSubTrigger>
+              <StyledDropdownMenuSubContent>
+                <StyledDropdownMenuItem onClick={() => window.electronAPI.checkForUpdates()}>
+                  <Icons.Download className="h-3.5 w-3.5" />
+                  Check for Updates
+                </StyledDropdownMenuItem>
+                <StyledDropdownMenuItem onClick={() => window.electronAPI.installUpdate()}>
+                  <Icons.Download className="h-3.5 w-3.5" />
+                  Install Update
+                </StyledDropdownMenuItem>
+                <StyledDropdownMenuSeparator />
+                <StyledDropdownMenuItem onClick={() => window.electronAPI.menuToggleDevTools()}>
+                  <Icons.Bug className="h-3.5 w-3.5" />
+                  Toggle DevTools
+                  <DropdownMenuShortcut className="pl-6">{isMac ? '⌥⌘I' : 'Ctrl+Shift+I'}</DropdownMenuShortcut>
+                </StyledDropdownMenuItem>
+              </StyledDropdownMenuSubContent>
+            </DropdownMenuSub>
+          </>
+        )}
+
+        <StyledDropdownMenuSeparator />
+
+        <StyledDropdownMenuItem onClick={() => window.electronAPI.menuQuit()}>
+          <Icons.LogOut className="h-3.5 w-3.5" />
+          {t("menu.quitCraftAgents")}
+          {quitHotkey && <DropdownMenuShortcut className="pl-6">{quitHotkey}</DropdownMenuShortcut>}
+        </StyledDropdownMenuItem>
+      </>
+    )
+  }
+
   return (
     <div
       className="fixed top-0 left-0 right-0 h-[48px] z-panel titlebar-drag-region"
@@ -265,7 +526,7 @@ export function TopBar({
         )}
 
         {/* Craft Menu */}
-        <DropdownMenu>
+        <DropdownMenu onOpenChange={(open) => { if (!open) setMenuState('main'); }}>
           <DropdownMenuTrigger asChild>
             <TopBarButton aria-label={t("menu.craftMenu")}>
               <CraftAgentsSymbol className="h-4 text-accent" />
@@ -277,107 +538,7 @@ export function TopBar({
             sideOffset={8}
             collisionPadding={10}
           >
-            <StyledDropdownMenuItem onClick={onNewChat}>
-              <SquarePenRounded className="h-3.5 w-3.5" />
-              {t("menu.newChat")}
-              {newChatHotkey && <DropdownMenuShortcut className="pl-6">{newChatHotkey}</DropdownMenuShortcut>}
-            </StyledDropdownMenuItem>
-            {onNewWindow && (
-              <StyledDropdownMenuItem onClick={onNewWindow}>
-                <Icons.AppWindow className="h-3.5 w-3.5" />
-                {t("menu.newWindow")}
-                {newWindowHotkey && <DropdownMenuShortcut className="pl-6">{newWindowHotkey}</DropdownMenuShortcut>}
-              </StyledDropdownMenuItem>
-            )}
-
-            <StyledDropdownMenuSeparator />
-
-            {renderMenuSection(EDIT_MENU, actionHandlers, t)}
-            {renderMenuSection(VIEW_MENU, actionHandlers, t)}
-            {renderMenuSection(WINDOW_MENU, actionHandlers, t)}
-
-            <StyledDropdownMenuSeparator />
-
-            <DropdownMenuSub>
-              <StyledDropdownMenuSubTrigger>
-                <Icons.Settings className="h-3.5 w-3.5" />
-                {t("sidebar.settings")}
-              </StyledDropdownMenuSubTrigger>
-              <StyledDropdownMenuSubContent>
-                <StyledDropdownMenuItem onClick={onOpenSettings}>
-                  <Icons.Settings className="h-3.5 w-3.5" />
-                  {t("menu.settings")}
-                  {settingsHotkey && <DropdownMenuShortcut className="pl-6">{settingsHotkey}</DropdownMenuShortcut>}
-                </StyledDropdownMenuItem>
-                <StyledDropdownMenuSeparator />
-                {SETTINGS_ITEMS.map((item) => {
-                  const Icon = SETTINGS_ICONS[item.id]
-                  return (
-                    <StyledDropdownMenuItem
-                      key={item.id}
-                      onClick={() => onOpenSettingsSubpage(item.id)}
-                    >
-                      <Icon className="h-3.5 w-3.5" />
-                      {t(item.labelKey)}
-                    </StyledDropdownMenuItem>
-                  )
-                })}
-              </StyledDropdownMenuSubContent>
-            </DropdownMenuSub>
-
-            <DropdownMenuSub>
-              <StyledDropdownMenuSubTrigger>
-                <Icons.HelpCircle className="h-3.5 w-3.5" />
-                {t("menu.help")}
-              </StyledDropdownMenuSubTrigger>
-              <StyledDropdownMenuSubContent>
-                <StyledDropdownMenuItem onClick={() => window.electronAPI.openUrl('https://agents.craft.do/docs')}>
-                  <Icons.HelpCircle className="h-3.5 w-3.5" />
-                  {t("menu.helpAndDocs")}
-                  <Icons.ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
-                </StyledDropdownMenuItem>
-                <StyledDropdownMenuItem onClick={onOpenKeyboardShortcuts}>
-                  <Icons.Keyboard className="h-3.5 w-3.5" />
-                  {t("menu.keyboardShortcuts")}
-                  {keyboardShortcutsHotkey && <DropdownMenuShortcut className="pl-6">{keyboardShortcutsHotkey}</DropdownMenuShortcut>}
-                </StyledDropdownMenuItem>
-              </StyledDropdownMenuSubContent>
-            </DropdownMenuSub>
-
-            {isDebugMode && (
-              <>
-                <DropdownMenuSub>
-                  <StyledDropdownMenuSubTrigger>
-                    <Icons.Bug className="h-3.5 w-3.5" />
-                    Debug
-                  </StyledDropdownMenuSubTrigger>
-                  <StyledDropdownMenuSubContent>
-                    <StyledDropdownMenuItem onClick={() => window.electronAPI.checkForUpdates()}>
-                      <Icons.Download className="h-3.5 w-3.5" />
-                      Check for Updates
-                    </StyledDropdownMenuItem>
-                    <StyledDropdownMenuItem onClick={() => window.electronAPI.installUpdate()}>
-                      <Icons.Download className="h-3.5 w-3.5" />
-                      Install Update
-                    </StyledDropdownMenuItem>
-                    <StyledDropdownMenuSeparator />
-                    <StyledDropdownMenuItem onClick={() => window.electronAPI.menuToggleDevTools()}>
-                      <Icons.Bug className="h-3.5 w-3.5" />
-                      Toggle DevTools
-                      <DropdownMenuShortcut className="pl-6">{isMac ? '⌥⌘I' : 'Ctrl+Shift+I'}</DropdownMenuShortcut>
-                    </StyledDropdownMenuItem>
-                  </StyledDropdownMenuSubContent>
-                </DropdownMenuSub>
-              </>
-            )}
-
-            <StyledDropdownMenuSeparator />
-
-            <StyledDropdownMenuItem onClick={() => window.electronAPI.menuQuit()}>
-              <Icons.LogOut className="h-3.5 w-3.5" />
-              {t("menu.quitCraftAgents")}
-              {quitHotkey && <DropdownMenuShortcut className="pl-6">{quitHotkey}</DropdownMenuShortcut>}
-            </StyledDropdownMenuItem>
+            {renderCraftMenuContent()}
           </StyledDropdownMenuContent>
         </DropdownMenu>
         </div>
