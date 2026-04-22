@@ -271,7 +271,12 @@ export function TopBar({
               <CraftAgentsSymbol className="h-4 text-accent" />
             </TopBarButton>
           </DropdownMenuTrigger>
-          <StyledDropdownMenuContent align="start" minWidth="min-w-48">
+          <StyledDropdownMenuContent 
+            align={isCompact ? "center" : "start"} 
+            minWidth="min-w-48"
+            sideOffset={8}
+            collisionPadding={10}
+          >
             <StyledDropdownMenuItem onClick={onNewChat}>
               <SquarePenRounded className="h-3.5 w-3.5" />
               {t("menu.newChat")}
