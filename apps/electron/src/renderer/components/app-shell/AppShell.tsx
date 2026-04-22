@@ -2208,7 +2208,7 @@ function AppShellContent({
               tabIndex={sidebarFocused ? 0 : -1}
               onKeyDown={handleSidebarKeyDown}
             >
-            <div className="flex h-full flex-col select-none">
+            <div className="flex h-full flex-col select-none bg-background">
               {/* Sidebar Top Section */}
               <div className="flex-1 flex flex-col min-h-0">
                 {/* New Session Button - Gmail-style, with context menu for "Open in New Window" */}

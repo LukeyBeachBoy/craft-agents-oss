@@ -301,8 +301,12 @@ export function ThemeProvider({
       delete root.dataset.theme
     }
 
-    // Always set theme override for semi-transparent background (vibrancy effect)
-    root.dataset.themeOverride = 'true'
+    // Only set theme override for semi-transparent background (vibrancy effect) on desktop
+    if (typeof window !== 'undefined' && (window as any).electronAPI) {
+      root.dataset.themeOverride = 'true'
+    } else {
+      delete root.dataset.themeOverride
+    }
   }, [effectiveColorTheme, font])
 
   // Apply dark/light class and theme-specific DOM attributes
