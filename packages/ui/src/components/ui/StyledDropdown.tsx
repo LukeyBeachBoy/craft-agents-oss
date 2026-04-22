@@ -106,11 +106,12 @@ interface StyledDropdownMenuContentProps
 export const StyledDropdownMenuContent = React.forwardRef<
   React.ComponentRef<typeof DropdownMenuPrimitive.Content>,
   StyledDropdownMenuContentProps
->(({ className, minWidth = 'min-w-40', light = false, sideOffset = 4, ...props }, ref) => (
+>(({ className, minWidth = 'min-w-40', light = false, sideOffset = 4, collisionPadding = 8, ...props }, ref) => (
   <DropdownMenuPrimitive.Portal>
     <DropdownMenuPrimitive.Content
       ref={ref}
       sideOffset={sideOffset}
+      collisionPadding={collisionPadding}
       className={cn(
         // shadcn base layer
         'popover-styled overflow-x-hidden overflow-y-auto p-1 z-dropdown',

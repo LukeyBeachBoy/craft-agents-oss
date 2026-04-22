@@ -75,18 +75,29 @@ export function PanelSlot({
     )
   }, [handleClose])
 
-  // Build back button for compact mode — closes the panel to reveal the session list.
+  // Build back button for compact mode — reveal the navigator.
   // Same PanelHeaderCenterButton style as X and share, just on the left side.
   const backButton = useMemo(() => {
     if (!isCompact) return undefined
+    
+    // Default action is to close the panel to reveal the navigator
+    let onClick = handleClose
+    let tooltip = t("common.backToList")
+
+    // For settings subpages, we want to go back to the navigator view (the settings list)
+    if (navState.navigator === 'settings' && navState.subpage !== 'app') {
+      onClick = () => parentContext.navigate(routes.view.settings())
+      tooltip = t("common.back")
+    }
+
     return (
       <PanelHeaderCenterButton
         icon={<ChevronLeft className="h-4 w-4" />}
-        onClick={handleClose}
-        tooltip={t("common.backToList")}
+        onClick={onClick}
+        tooltip={tooltip}
       />
     )
-  }, [isCompact, handleClose])
+  }, [isCompact, handleClose, navState, parentContext.onOpenSettings, t])
 
   // Override AppShellContext so ChatPage/PanelHeader gets our per-panel close button,
   // back button (compact mode), and isFocusedPanel for input field appearance
