@@ -272,6 +272,8 @@ export interface ResponseContent {
   messageId?: string
   /** Persisted annotations attached to the response message */
   annotations?: AnnotationV1[]
+  /** Actual model used for this response (from API response metadata) */
+  actualModel?: string
 }
 
 // ============================================================================
@@ -1397,6 +1399,8 @@ export interface ResponseCardProps {
   messageId?: string
   /** Persisted annotations for this response */
   annotations?: AnnotationV1[]
+  /** Actual model used for this response (from API response metadata) */
+  actualModel?: string
   /** Callback when user accepts the plan (plan variant only) */
   onAccept?: () => void
   /** Callback when user accepts the plan with compaction (compact first, then execute) */
@@ -1651,6 +1655,7 @@ export function ResponseCard({
   sessionId,
   messageId,
   annotations,
+  actualModel,
   onAccept,
   onAcceptWithCompact,
   isLastResponse = true,
@@ -2521,6 +2526,12 @@ export function ResponseCard({
 
               {/* Right side */}
               <div className="flex items-center gap-3">
+                {/* Actual model indicator - shown when response model differs from or confirms selected model */}
+                {actualModel && (
+                  <span className="text-[11px] text-muted-foreground/50 font-mono tabular-nums select-text" title="Model used for this response">
+                    {actualModel}
+                  </span>
+                )}
                 {/* Accept Plan dropdown (plan variant only, last response) */}
                 {isPlan && showAcceptPlan && onAccept && onAcceptWithCompact && (
                   <div
@@ -3132,6 +3143,7 @@ export const TurnCard = React.memo(function TurnCard({
                 variant={response.isPlan ? 'plan' : 'response'}
                 messageId={response.messageId}
                 annotations={response.annotations}
+                actualModel={response.actualModel}
                 onAddAnnotation={onAddAnnotation}
                 onRemoveAnnotation={onRemoveAnnotation}
                 onUpdateAnnotation={onUpdateAnnotation}
@@ -3164,6 +3176,7 @@ export const TurnCard = React.memo(function TurnCard({
             variant={response.isPlan ? 'plan' : 'response'}
             messageId={response.messageId}
             annotations={response.annotations}
+            actualModel={response.actualModel}
             onAddAnnotation={onAddAnnotation}
             onRemoveAnnotation={onRemoveAnnotation}
             onUpdateAnnotation={onUpdateAnnotation}

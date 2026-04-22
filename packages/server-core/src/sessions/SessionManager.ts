@@ -6066,6 +6066,7 @@ export class SessionManager implements ISessionManager {
           isIntermediate: event.isIntermediate,
           turnId: event.turnId,
           parentToolUseId: event.parentToolUseId,
+          ...(event.actualModel ? { actualModel: event.actualModel } : {}),
         }
         managed.messages.push(assistantMessage)
         managed.streamingText = ''

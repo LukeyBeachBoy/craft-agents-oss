@@ -182,7 +182,7 @@ export class PiEventAdapter extends BaseEventAdapter {
       case 'message_end': {
         // Pi SDK emits message_end for ALL messages (user, assistant, toolResult).
         // Only process assistant messages — skip user prompts and tool results.
-        const msg = event.message as { role?: string; stopReason?: string; errorMessage?: string; usage?: { input: number; output: number; cacheRead: number; cacheWrite: number; totalTokens: number; cost: { total: number } } } | undefined;
+        const msg = event.message as { role?: string; stopReason?: string; errorMessage?: string; model?: string; usage?: { input: number; output: number; cacheRead: number; cacheWrite: number; totalTokens: number; cost: { total: number } } } | undefined;
         const sdkTurnAnchor = (event as { sdkTurnAnchor?: string }).sdkTurnAnchor;
         if (msg?.role !== 'assistant') break;
 
@@ -217,6 +217,7 @@ export class PiEventAdapter extends BaseEventAdapter {
             isIntermediate,
             turnId: mTurnId,
             sdkTurnAnchor,
+            ...(msg.model ? { actualModel: msg.model } : {}),
           };
           this.hasStreamedDeltas = false;
         }

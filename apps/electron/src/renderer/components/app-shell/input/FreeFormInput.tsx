@@ -1840,7 +1840,7 @@ export function FreeFormInput({
           </div>
           )}
 
-          {/* Desktop: full badges row with labels and working directory */
+          {/* Desktop: full badges row with labels and working directory */}
           {!compactMode && (
           <div className="flex items-center gap-1 min-w-32 shrink overflow-hidden">
           {/* 1. Attach Files Badge */}

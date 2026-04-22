@@ -621,6 +621,7 @@ export function groupMessagesByTurn(messages: Message[]): Turn[] {
         streamStartTime: message.isStreaming ? message.timestamp : undefined,
         messageId: message.id,
         annotations: message.annotations,
+        actualModel: message.actualModel,
       }
       currentTurn.isStreaming = !!message.isStreaming
       currentTurn.isComplete = !message.isStreaming
