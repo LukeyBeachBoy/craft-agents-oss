@@ -127,6 +127,9 @@ export function registerWorkspaceCoreHandlers(server: RpcServer, deps: HandlerDe
       }
     }
 
+    // Persist the active workspace so it's restored on next connection
+    setActiveWorkspace(workspaceId)
+
     // Set up ConfigWatcher for the new workspace
     const workspace = getWorkspaceByNameOrId(workspaceId)
     if (workspace) {
