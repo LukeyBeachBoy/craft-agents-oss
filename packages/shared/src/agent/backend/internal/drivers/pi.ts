@@ -1,5 +1,6 @@
 import type { ProviderDriver, DriverTestConnectionArgs } from '../driver-types.ts';
 import type { ModelDefinition } from '../../../../config/models.ts';
+import { isClaudeModel } from '../../../../config/models.ts';
 import { getAllPiModels, getPiModelsForAuthProvider } from '../../../../config/models-pi.ts';
 import { getPiProviderBaseUrl } from '../../../../config/models-pi.ts';
 
@@ -112,15 +113,23 @@ function filterEnabledModels(models: RawCopilotModel[]): RawCopilotModel[] {
 
 /** Convert raw Copilot models to our ModelDefinition format. */
 function toModelDefinitions(models: RawCopilotModel[]): ModelDefinition[] {
-  return models.map(m => ({
-    id: m.id,
-    name: m.name,
-    shortName: m.name,
-    description: '',
-    provider: 'pi' as const,
-    contextWindow: m.contextWindow || 200_000,
-    supportsThinking: !!(m.supportedReasoningEfforts && m.supportedReasoningEfforts.length > 0),
-  }));
+  return models.map(m => {
+    // Use supportedReasoningEfforts from the Copilot API when available.
+    // Fall back to model-ID-based detection for Claude models: the Copilot API often
+    // omits this field even for models that do support thinking (e.g. Claude Sonnet 4.6,
+    // Opus 4.7), so we treat all Claude models as thinking-capable by default.
+    const hasReasoningEfforts = !!(m.supportedReasoningEfforts && m.supportedReasoningEfforts.length > 0);
+    const supportsThinking = hasReasoningEfforts || isClaudeModel(m.id);
+    return {
+      id: m.id,
+      name: m.name,
+      shortName: m.name,
+      description: '',
+      provider: 'pi' as const,
+      contextWindow: m.contextWindow || 200_000,
+      supportsThinking,
+    };
+  });
 }
 
 /** Log a breakdown of models by policy state. */
