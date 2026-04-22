@@ -536,7 +536,7 @@ export function TopBar({
             align={isCompact ? "center" : "start"} 
             minWidth="min-w-48"
             sideOffset={8}
-            collisionPadding={10}
+            collisionPadding={isCompact ? 20 : 10}
           >
             {renderCraftMenuContent()}
           </StyledDropdownMenuContent>

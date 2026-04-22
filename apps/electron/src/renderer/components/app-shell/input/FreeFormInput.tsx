@@ -1713,7 +1713,7 @@ export function FreeFormInput({
 
           {/* Compact mode: permission mode drawer + standard icon badges for attach/sources/working dir */}
           {compactMode && (
-          <>
+          <div className="flex-1 flex items-center gap-1 min-w-0 overflow-x-auto no-scrollbar py-0.5">
           {onPermissionModeChange && (
             <CompactPermissionModeSelector
               permissionMode={permissionMode}
@@ -1734,7 +1734,7 @@ export function FreeFormInput({
             disabled={disabled}
           />
           {onSourcesChange && (
-            <div className="relative shrink min-w-0">
+            <div className="relative shrink-0 min-w-0">
               <FreeFormInputContextBadge
                 buttonRef={sourceButtonRef}
                 icon={
@@ -1814,10 +1814,33 @@ export function FreeFormInput({
               workspaceId={workspaceId}
             />
           )}
-          </>
+          {/* Compact mode: premium request usage indicator */}
+          {copilotUsage && !copilotUsage.error && !copilotUsage.unlimited && copilotUsage.limit > 0 && (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className={cn(
+                  "text-[11px] font-mono tabular-nums shrink-0 px-1",
+                  copilotUsage.percentRemaining <= 10 ? "text-red-500" :
+                  copilotUsage.percentRemaining <= 25 ? "text-yellow-500" :
+                  "text-muted-foreground/70"
+                )}>
+                  {Math.round(100 - copilotUsage.percentRemaining)}%
+                </span>
+              </TooltipTrigger>
+              <TooltipContent side="top">
+                <div className="text-xs">
+                  <div>Premium requests: {copilotUsage.used} of {copilotUsage.limit} used ({Math.round(100 - copilotUsage.percentRemaining)}%)</div>
+                  {copilotUsage.plan && <div className="text-muted-foreground capitalize">Plan: Copilot {copilotUsage.plan}</div>}
+                  {copilotUsage.overageEnabled && <div className="text-muted-foreground">Overages enabled</div>}
+                  {copilotUsage.resetDate && <div className="text-muted-foreground">Resets {new Date(copilotUsage.resetDate).toLocaleDateString('en-GB', { month: 'short', day: 'numeric' })}</div>}
+                </div>
+              </TooltipContent>
+            </Tooltip>
+          )}
+          </div>
           )}
 
-          {/* Desktop: full badges row with labels and working directory */}
+          {/* Desktop: full badges row with labels and working directory */
           {!compactMode && (
           <div className="flex items-center gap-1 min-w-32 shrink overflow-hidden">
           {/* 1. Attach Files Badge */}
