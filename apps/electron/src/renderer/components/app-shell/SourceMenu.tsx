@@ -15,6 +15,7 @@
  */
 
 import * as React from 'react'
+import { useTranslation } from "react-i18next"
 import {
   Trash2,
   FolderOpen,
@@ -49,6 +50,8 @@ export function SourceMenu({
   onDelete,
   onSendToWorkspace,
 }: SourceMenuProps) {
+  const { t } = useTranslation()
+
   // Get menu components from context (works with both DropdownMenu and ContextMenu)
   const { MenuItem, Separator } = useMenuComponents()
 
@@ -57,20 +60,20 @@ export function SourceMenu({
       {/* Open in New Window */}
       <MenuItem onClick={onOpenInNewWindow}>
         <AppWindow className="h-3.5 w-3.5" />
-        <span className="flex-1">Open in New Window</span>
+        <span className="flex-1">{t("sidebarMenu.openInNewWindow")}</span>
       </MenuItem>
 
       {/* Show in file manager */}
       <MenuItem onClick={onShowInFinder}>
         <FolderOpen className="h-3.5 w-3.5" />
-        <span className="flex-1">{`Show in ${getFileManagerName()}`}</span>
+        <span className="flex-1">{t("sessionMenu.showInFileManager", { fileManager: getFileManagerName() })}</span>
       </MenuItem>
 
       {/* Send to another workspace */}
       {onSendToWorkspace && (
         <MenuItem onClick={onSendToWorkspace}>
           <Send className="h-3.5 w-3.5" />
-          <span className="flex-1">Send to Workspace</span>
+          <span className="flex-1">{t("sessionMenu.sendToWorkspace")}</span>
         </MenuItem>
       )}
 
@@ -79,7 +82,7 @@ export function SourceMenu({
       {/* Delete */}
       <MenuItem onClick={onDelete} variant="destructive">
         <Trash2 className="h-3.5 w-3.5" />
-        <span className="flex-1">Delete Source</span>
+        <span className="flex-1">{t("sidebarMenu.deleteSource")}</span>
       </MenuItem>
     </>
   )

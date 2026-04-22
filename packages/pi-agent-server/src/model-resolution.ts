@@ -43,17 +43,61 @@ export function resolvePiModel(
     }
   }
 
-  // Fallback: search all available models
+  // Fallback: search all available models.
+  // When piAuthProvider is set, only return models from the same provider
+  // (or 'custom-endpoint'). Without this guard, a model that exists under
+  // a different provider (e.g. "gpt-5.4" under "azure-openai-responses"
+  // when authed as "github-copilot") would be returned, and the Pi SDK
+  // would fail with "No API key found for <wrong-provider>".
   const allModels = modelRegistry.getAll();
-  const match = allModels.find(m => m.id === bareId || m.name === bareId);
+  const match = allModels.find(m =>
+    (m.id === bareId || m.name === bareId) &&
+    (!piAuthProvider || (m as any).provider === piAuthProvider || (m as any).provider === 'custom-endpoint'),
+  );
   if (match) return match;
 
   // Try common providers with the model ID
   const providers = ['custom-endpoint', 'anthropic', 'openai', 'google'];
   for (const provider of providers) {
+    // Skip providers incompatible with the authenticated provider
+    if (piAuthProvider && provider !== piAuthProvider && provider !== 'custom-endpoint') continue;
     const model = modelRegistry.find(provider, bareId);
     if (model) return model;
   }
 
   return undefined;
+}
+
+/**
+ * Returns true when `modelId` must NOT be used as the mini/summarization model given
+ * the current auth provider.
+ *
+ * - `codex-mini-latest` is always denied (Pi SDK rejects it outright).
+ * - When `piAuthProvider === 'openai-codex'` (ChatGPT Plus/Pro OAuth or ChatGPT-JWT API key),
+ *   all `*codex-mini*` variants (e.g. `gpt-5.1-codex-mini`) are denied — the ChatGPT
+ *   backend refuses them with: "The '<model>' model is not supported when using Codex
+ *   with a ChatGPT account." A regular OpenAI API key uses provider `'openai'`, which is
+ *   unaffected.
+ */
+export function isDeniedMiniModelId(modelId: string, piAuthProvider?: string): boolean {
+  const bare = modelId.startsWith('pi/') ? modelId.slice(3) : modelId;
+  if (bare === 'codex-mini-latest') return true;
+  if (piAuthProvider === 'openai-codex' && bare.includes('codex-mini')) return true;
+  return false;
+}
+
+/**
+ * Returns true when an error message indicates the requested model is unavailable and a
+ * different model should be tried. Matches both the standard OpenAI "model not found"
+ * shapes and the ChatGPT-account Codex "… is not supported" refusal.
+ */
+export function isModelNotFoundError(message: string): boolean {
+  const normalized = message.toLowerCase();
+  return (
+    normalized.includes('model_not_found') ||
+    normalized.includes('does not exist') ||
+    normalized.includes('no such model') ||
+    normalized.includes('is not supported') ||
+    (normalized.includes('requested model') && normalized.includes('not') && normalized.includes('exist'))
+  );
 }

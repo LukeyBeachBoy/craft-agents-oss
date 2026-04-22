@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useTheme } from '@/hooks/useTheme'
 import type { ThemeOverrides } from '@config/theme'
 import { useSetAtom, useStore, useAtomValue, useAtom } from 'jotai'
@@ -36,10 +37,12 @@ import {
   addSessionAtom,
   removeSessionAtom,
   updateSessionAtom,
+  refreshSessionsMetadataAtom,
   sessionAtomFamily,
   sessionMetaMapAtom,
   sessionIdsAtom,
   loadedSessionsAtom,
+  forceSessionMessagesReloadAtom,
   backgroundTasksAtomFamily,
   extractSessionMeta,
   windowWorkspaceIdAtom,
@@ -163,12 +166,14 @@ function SessionLoadErrorScreen({
   message: string
   onRetry: () => void
 }) {
+  const { t } = useTranslation()
+
   return (
     <div className="flex h-full items-center justify-center p-6">
       <div className="max-w-lg rounded-xl border border-border/50 bg-background shadow-minimal p-6 text-center">
-        <h2 className="text-lg font-semibold text-foreground">Failed to load sessions</h2>
+        <h2 className="text-lg font-semibold text-foreground">{t("errors.failedToLoadSessions")}</h2>
         <p className="mt-2 text-sm text-foreground/60">
-          Craft Agents could connect, but loading the session list failed. This is not being treated as an empty workspace to avoid hiding a real bug or data problem.
+          {t("errors.failedToLoadSessionsDesc")}
         </p>
         <p className="mt-3 rounded-lg bg-foreground/5 px-3 py-2 text-left text-xs text-foreground/70 break-words">
           {message}
@@ -178,7 +183,7 @@ function SessionLoadErrorScreen({
           onClick={onRetry}
           className="mt-4 inline-flex h-8 items-center justify-center rounded-[8px] bg-foreground text-background px-3 text-sm font-medium hover:opacity-90 transition-opacity"
         >
-          Retry loading sessions
+          {t("errors.retryLoadingSessions")}
         </button>
       </div>
     </div>
@@ -186,6 +191,8 @@ function SessionLoadErrorScreen({
 }
 
 export default function App() {
+  const { t } = useTranslation()
+
   // Initialize renderer perf tracking early (debug mode = running from source)
   // Uses useEffect with empty deps to run once on mount before any session switches
   useEffect(() => {
@@ -400,21 +407,27 @@ export default function App() {
     })
   }, [])
 
-  const refreshSessionFromServer = useCallback(async (sessionId: string): Promise<boolean> => {
+  const refreshSessionFromServer = useCallback(async (sessionId: string): Promise<'refreshed' | 'preserved_stale_messages' | 'failed'> => {
     try {
       const fresh = await window.electronAPI.getSessionMessages(sessionId)
-      if (!fresh) return false
+      if (!fresh) return 'failed'
+
+      const prevSession = store.get(sessionAtomFamily(sessionId))
+      const preservedStaleMessages = !!prevSession && prevSession.messages.length > 0 && (!fresh.messages || fresh.messages.length === 0)
+      const nextSession = preservedStaleMessages
+        ? { ...fresh, messages: prevSession.messages }
+        : fresh
 
       clearStreamingState(sessionId)
-      updateSessionDirect(sessionId, () => fresh)
-      syncSessionOptionsFromSession(fresh)
+      updateSessionDirect(sessionId, () => nextSession)
+      syncSessionOptionsFromSession(nextSession)
       void reconcilePermissionModeState(sessionId)
-      return true
+      return preservedStaleMessages ? 'preserved_stale_messages' : 'refreshed'
     } catch (err) {
       console.error(`[App] Failed to refresh session ${sessionId}:`, err)
-      return false
+      return 'failed'
     }
-  }, [clearStreamingState, updateSessionDirect, syncSessionOptionsFromSession, reconcilePermissionModeState])
+  }, [clearStreamingState, updateSessionDirect, syncSessionOptionsFromSession, reconcilePermissionModeState, store])
 
   const loadSessionsFromServer = useCallback(async () => {
     setSessionLoadError(null)
@@ -471,50 +484,26 @@ export default function App() {
   const refreshSessionListMetadataFromServer = useCallback(async (): Promise<Map<string, SessionMeta> | null> => {
     try {
       const sessions = await window.electronAPI.getSessions()
+      console.info(`[App] getSessions returned ${sessions.length} session(s) for reconnect refresh`)
       const loadedSessionIds = store.get(loadedSessionsAtom)
-      const currentIds = store.get(sessionIdsAtom)
-      const latestIds = new Set(sessions.map(session => session.id))
 
-      for (const staleSessionId of currentIds) {
-        if (!latestIds.has(staleSessionId)) {
-          removeSession(staleSessionId)
-        }
-      }
+      // Single transactional atom write — all cross-atom mutations happen
+      // inside one Jotai write function so React subscribers see one
+      // consistent update instead of intermediate states.
+      const nextMetaMap = store.set(refreshSessionsMetadataAtom, { sessions, loadedSessionIds })
 
+      // Sync app-level state (React hooks / non-atom concerns) after the atom transaction
       for (const session of sessions) {
-        const currentSession = store.get(sessionAtomFamily(session.id))
-        const shouldPreserveMessages = !!currentSession && loadedSessionIds.has(session.id)
-        const nextSession = shouldPreserveMessages && currentSession
-          ? {
-              ...session,
-              messages: currentSession.messages,
-            }
-          : session
-
-        store.set(sessionAtomFamily(session.id), nextSession)
-
         syncSessionOptionsFromSession(session)
-        void reconcilePermissionModeState(session.id)
       }
-
-      const nextMetaMap = new Map<string, SessionMeta>()
-      for (const session of sessions) {
-        nextMetaMap.set(session.id, extractSessionMeta(session))
-      }
-      store.set(sessionMetaMapAtom, nextMetaMap)
-
-      const nextIds = sessions
-        .slice()
-        .sort((a, b) => (b.lastMessageAt || 0) - (a.lastMessageAt || 0))
-        .map(session => session.id)
-      store.set(sessionIdsAtom, nextIds)
+      await Promise.allSettled(sessions.map(s => reconcilePermissionModeState(s.id)))
 
       return nextMetaMap
     } catch (err) {
       console.error('[App] Failed to refresh session list metadata after reconnect:', err)
       return null
     }
-  }, [store, removeSession, syncSessionOptionsFromSession, reconcilePermissionModeState])
+  }, [store, syncSessionOptionsFromSession, reconcilePermissionModeState])
 
   // Stale session watchdog — catches stuck sessions that the reconnect protocol misses
   const { trackSessionActivity } = useStaleSessionRecovery({
@@ -645,8 +634,8 @@ export default function App() {
     // Show actionable toast for missing system dependencies (Windows only)
     window.electronAPI.getSystemWarnings().then((warnings) => {
       if (warnings.vcredistMissing) {
-        toast.warning('Microsoft Visual C++ Redistributable not found', {
-          description: 'Document tools (PDF, PPTX, DOCX, XLSX) require it to work. Restart after installing.',
+        toast.warning(t('toast.vcRedistNotFound'), {
+          description: t('toast.vcRedistNotFoundDesc'),
           duration: Infinity,
           action: {
             label: 'Install',
@@ -977,11 +966,36 @@ export default function App() {
       const metaMap = refreshedMetaMap ?? store.get(sessionMetaMapAtom)
       const refreshIds = getSessionsToRefreshAfterStaleReconnect(metaMap, sessionSelection.selected)
 
+      console.info(`[App] Stale reconnect — refreshing ${refreshIds.length} session(s):`, refreshIds)
+
       // Refresh full message content only for the active session plus any
       // session still marked processing after the metadata refresh.
       for (const sessionId of refreshIds) {
-        await refreshSessionFromServer(sessionId)
+        let refreshResult = await refreshSessionFromServer(sessionId)
+        if (refreshResult !== 'refreshed') {
+          // Server may need time to restart session subprocess after reconnect,
+          // or it may still be lazily loading session messages.
+          for (const delay of [2000, 4000]) {
+            console.warn(`[App] Retrying session refresh for ${sessionId} after ${delay}ms (${refreshResult})`)
+            await new Promise(r => setTimeout(r, delay))
+            refreshResult = await refreshSessionFromServer(sessionId)
+            if (refreshResult === 'refreshed') break
+          }
+        }
       }
+
+      // Final fallback: if the active session is still empty, force a reload
+      // even when the session is already marked loaded.
+      if (sessionSelection.selected) {
+        const session = store.get(sessionAtomFamily(sessionSelection.selected))
+        if (session && (!session.messages || session.messages.length === 0)) {
+          console.warn('[App] Active session still has no messages after stale reconnect refresh — forcing message reload')
+          await store.set(forceSessionMessagesReloadAtom, sessionSelection.selected)
+        } else if (session) {
+          console.info(`[App] Stale reconnect recovery complete — active session has ${session.messages?.length ?? 0} messages`)
+        }
+      }
+
     })
 
     return cleanup
@@ -1429,7 +1443,7 @@ export default function App() {
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unknown error'
         console.error('Failed to open file:', error)
-        toast.error('Failed to open file', {
+        toast.error(t('toast.failedToOpenFile'), {
           description: message,
         })
       }
@@ -1440,7 +1454,7 @@ export default function App() {
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unknown error'
         console.error('Failed to open URL:', error)
-        toast.error('Failed to open link', {
+        toast.error(t('toast.failedToOpenLink'), {
           description: `${message}. If this is a local path, use Open File instead.`,
         })
       }
@@ -1451,7 +1465,7 @@ export default function App() {
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unknown error'
         console.error('Failed to show in folder:', error)
-        toast.error(`Failed to reveal in ${getFileManagerName()}`, {
+        toast.error(t("toast.failedToReveal", { fileManager: getFileManagerName() }), {
           description: message,
         })
       }
@@ -1467,7 +1481,7 @@ export default function App() {
   const handleReconnectTransport = useCallback(() => {
     void window.electronAPI.reconnectTransport().catch((error) => {
       const message = error instanceof Error ? error.message : 'Unknown error'
-      toast.error('Reconnect failed', { description: message })
+      toast.error(t('toast.reconnectFailed'), { description: message })
     })
   }, [])
 

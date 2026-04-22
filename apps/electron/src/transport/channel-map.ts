@@ -143,7 +143,6 @@ export const CHANNEL_MAP = {
   getCopilotAuthStatus: invoke(RPC_CHANNELS.copilot.GET_AUTH_STATUS),
   copilotLogout: invoke(RPC_CHANNELS.copilot.LOGOUT),
   onCopilotDeviceCode: listener(RPC_CHANNELS.copilot.DEVICE_CODE),
-  getCopilotPremiumUsage: invoke(RPC_CHANNELS.copilot.GET_PREMIUM_USAGE),
 
   // Server info (REMOTE_ELIGIBLE)
   getServerHomeDir: invoke(RPC_CHANNELS.server.HOME_DIR),
@@ -378,4 +377,21 @@ export const CHANNEL_MAP = {
   // Resources (cross-workspace export/import)
   exportResources: invoke(RPC_CHANNELS.resources.EXPORT),
   importResources: invoke(RPC_CHANNELS.resources.IMPORT),
+
+  // Messaging gateway
+  getMessagingConfig: invoke(RPC_CHANNELS.messaging.GET_CONFIG),
+  updateMessagingConfig: invoke(RPC_CHANNELS.messaging.UPDATE_CONFIG),
+  testTelegramToken: invoke(RPC_CHANNELS.messaging.TEST_TELEGRAM),
+  saveTelegramToken: invoke(RPC_CHANNELS.messaging.SAVE_TELEGRAM),
+  disconnectMessagingPlatform: invoke(RPC_CHANNELS.messaging.DISCONNECT),
+  forgetMessagingPlatform: invoke(RPC_CHANNELS.messaging.FORGET),
+  getMessagingBindings: invoke(RPC_CHANNELS.messaging.GET_BINDINGS),
+  generateMessagingPairingCode: invoke(RPC_CHANNELS.messaging.GENERATE_CODE),
+  unbindMessagingSession: invoke(RPC_CHANNELS.messaging.UNBIND),
+  unbindMessagingBinding: invoke(RPC_CHANNELS.messaging.UNBIND_BINDING),
+  onMessagingBindingChanged: listener(RPC_CHANNELS.messaging.BINDING_CHANGED),
+  onMessagingPlatformStatus: listener(RPC_CHANNELS.messaging.PLATFORM_STATUS),
+  startWhatsAppConnect: invoke(RPC_CHANNELS.messaging.WA_START_CONNECT),
+  submitWhatsAppPhone: invoke(RPC_CHANNELS.messaging.WA_SUBMIT_PHONE),
+  onWhatsAppEvent: listener(RPC_CHANNELS.messaging.WA_UI_EVENT),
 } satisfies ChannelMap

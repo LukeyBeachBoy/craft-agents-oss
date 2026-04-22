@@ -18,6 +18,7 @@ import { cn } from '../../lib/utils'
 import { Markdown } from '../markdown'
 import { FileTypeIcon, getFileTypeLabel } from './attachment-helpers'
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '../tooltip'
+import { useTranslation } from 'react-i18next'
 
 // Fallback text icons for badges without iconDataUrl
 // Using simple characters since SVG rendering may not work in all contexts
@@ -96,13 +97,14 @@ function CommandBadge({ badge }: { badge: ContentBadge }) {
  * Note: edit_request badges are handled separately by EditRequestBadge
  */
 function ContextBadge({ badge }: { badge: ContentBadge }) {
+  const { t } = useTranslation()
   const displayLabel = badge.collapsedLabel || badge.label
 
   return (
     <span
       className="inline-flex items-center gap-1 h-[22px] px-1.5 mr-1 rounded-[5px] bg-background shadow-minimal text-[12px] align-middle"
       style={{ verticalAlign: 'middle', transform: 'translateY(-1px)' }}
-      title="Context badge"
+      title={t('chat.contextBadge')}
     >
       <span className="h-[12px] w-[12px] rounded-[2px] bg-foreground/5 flex items-center justify-center text-foreground/50 shrink-0 text-[8px]">
         {CONTEXT_ICON_TEXT}
@@ -331,6 +333,7 @@ export function UserMessageBubble({
   isQueued,
   compactMode,
 }: UserMessageBubbleProps) {
+  const { t } = useTranslation()
   const hasAttachments = attachments && attachments.length > 0
 
   // Separate edit_request badges (rendered above bubble) from other badges (rendered inline)
@@ -366,7 +369,7 @@ export function UserMessageBubble({
                 key={att.id || i}
                 className="shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
                 onClick={() => att.storedPath && onFileClick?.(att.storedPath)}
-                title={`Click to open ${att.name}`}
+                title={t('chat.clickToOpen', { name: att.name })}
               >
                 {isImage ? (
                   /* IMAGE: Square thumbnail only */
