@@ -258,7 +258,7 @@
 
       try {
         const password = document.getElementById('password').value;
-        const res = await fetch('/api/auth', {
+        const res = await fetch('api/auth', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ password }),
@@ -266,7 +266,7 @@
 
         if (res.ok) {
           // Cookie is set by the response — redirect to app
-          window.location.href = '/';
+          window.location.href = './';
           return;
         }
 

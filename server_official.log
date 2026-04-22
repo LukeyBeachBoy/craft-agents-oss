@@ -1,0 +1,408 @@
+2026-04-22T07:50:39.954Z INFO  [bootstrap] Config artifacts initialized
+2026-04-22T07:50:39.955Z INFO  [bootstrap] Global config found
+2026-04-22T07:50:40.002Z INFO  [session] Reinitializing auth for connection: github-copilot (oauth)
+2026-04-22T07:50:40.002Z INFO  [session] Auth env vars set for connection: github-copilot
+2026-04-22T07:50:40.002Z INFO  [session] Setting up ConfigWatcher for workspace: 5d673540-d73c-0211-009e-541155b2058d (/Users/luke/.craft-agent/workspaces/my-workspace)
+2026-04-22T07:50:40.008Z INFO  [session] Initialized AutomationSystem for workspace 5d673540-d73c-0211-009e-541155b2058d
+2026-04-22T07:50:40.008Z INFO  [session] Setting up ConfigWatcher for workspace: 6004489e-c79b-967f-a3a7-4edf1efe4e8c (/Users/luke/.craft-agent/workspaces/gas-cert-pro)
+2026-04-22T07:50:40.010Z INFO  [session] Initialized AutomationSystem for workspace 6004489e-c79b-967f-a3a7-4edf1efe4e8c
+2026-04-22T07:50:40.010Z INFO  [session] Setting up ConfigWatcher for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe (/Users/luke/.craft-agent/workspaces/boiler-manuals)
+2026-04-22T07:50:40.011Z INFO  [session] Initialized AutomationSystem for workspace 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:50:40.076Z INFO  [session] Loaded 217 sessions from disk (metadata only)
+2026-04-22T07:50:40.077Z INFO  Craft Agent server listening on ws://0.0.0.0:9100
+CRAFT_SERVER_URL=ws://0.0.0.0:9100
+CRAFT_SERVER_TOKEN=4d38de5682867af2ce1e7aa05d9930710968b93b6b7a3f4fd4d86048c194d6ff
+CRAFT_WEBUI_URL=http://0.0.0.0:9100
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+2026-04-22T07:50:40.077Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T07:50:40.979Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+2026-04-22T07:50:46.318Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:50:46.323Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:50:46.410Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe, workingDirectory: /Users/luke/Development/gas-cert-pro-react
+2026-04-22T07:50:46.411Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+[SchedulerService] TICK at 09:51 UTC: 2026-04-22T07:51:00.009Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:51 UTC: 2026-04-22T07:51:00.011Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:51 UTC: 2026-04-22T07:51:00.011Z
+[SchedulerService] TICK callback completed
+2026-04-22T07:51:04.547Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:51:04.548Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:51:04.723Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:51:04.723Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:51:04.802Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe, workingDirectory: /Users/luke/Development/gas-cert-pro-react
+2026-04-22T07:51:04.802Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:51:05.176Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:51:05.177Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:51:05.261Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe, workingDirectory: /Users/luke/Development/gas-cert-pro-react
+2026-04-22T07:51:05.262Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+[SchedulerService] TICK at 09:52 UTC: 2026-04-22T07:52:00.018Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:52 UTC: 2026-04-22T07:52:00.020Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:52 UTC: 2026-04-22T07:52:00.020Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:53 UTC: 2026-04-22T07:53:00.022Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:53 UTC: 2026-04-22T07:53:00.022Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:53 UTC: 2026-04-22T07:53:00.022Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:54 UTC: 2026-04-22T07:54:00.023Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:54 UTC: 2026-04-22T07:54:00.023Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:54 UTC: 2026-04-22T07:54:00.023Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:55 UTC: 2026-04-22T07:55:00.023Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:55 UTC: 2026-04-22T07:55:00.023Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:55 UTC: 2026-04-22T07:55:00.023Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:56 UTC: 2026-04-22T07:56:00.024Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:56 UTC: 2026-04-22T07:56:00.025Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:56 UTC: 2026-04-22T07:56:00.025Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:57 UTC: 2026-04-22T07:57:00.029Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:57 UTC: 2026-04-22T07:57:00.030Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:57 UTC: 2026-04-22T07:57:00.030Z
+[SchedulerService] TICK callback completed
+2026-04-22T07:57:33.767Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:57:33.770Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:57:33.909Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe, workingDirectory: /Users/luke/Development/gas-cert-pro-react
+2026-04-22T07:57:33.909Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+[SchedulerService] TICK at 09:58 UTC: 2026-04-22T07:58:00.031Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:58 UTC: 2026-04-22T07:58:00.031Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:58 UTC: 2026-04-22T07:58:00.031Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:59 UTC: 2026-04-22T07:59:00.033Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:59 UTC: 2026-04-22T07:59:00.035Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:59 UTC: 2026-04-22T07:59:00.035Z
+[SchedulerService] TICK callback completed
+2026-04-22T07:59:15.986Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:59:15.987Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:59:16.139Z INFO  SKILLS_GET: Loading skills for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe, workingDirectory: /Users/luke/Development/gas-cert-pro-react
+2026-04-22T07:59:16.140Z INFO  SKILLS_GET: Loaded 3 skills from /Users/luke/.craft-agent/workspaces/boiler-manuals
+[SchedulerService] TICK at 10:00 UTC: 2026-04-22T08:00:00.037Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:00 UTC: 2026-04-22T08:00:00.037Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:00 UTC: 2026-04-22T08:00:00.037Z
+[SchedulerService] TICK callback completed
+2026-04-22T08:00:40.088Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T08:00:40.971Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+[SchedulerService] TICK at 10:01 UTC: 2026-04-22T08:01:00.038Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:01 UTC: 2026-04-22T08:01:00.038Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:01 UTC: 2026-04-22T08:01:00.039Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:02 UTC: 2026-04-22T08:02:00.039Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:02 UTC: 2026-04-22T08:02:00.039Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:02 UTC: 2026-04-22T08:02:00.039Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:03 UTC: 2026-04-22T08:03:00.040Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:03 UTC: 2026-04-22T08:03:00.041Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:03 UTC: 2026-04-22T08:03:00.041Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:04 UTC: 2026-04-22T08:04:00.046Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:04 UTC: 2026-04-22T08:04:00.046Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:04 UTC: 2026-04-22T08:04:00.046Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:05 UTC: 2026-04-22T08:05:00.052Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:05 UTC: 2026-04-22T08:05:00.052Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:05 UTC: 2026-04-22T08:05:00.053Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:06 UTC: 2026-04-22T08:06:00.053Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:06 UTC: 2026-04-22T08:06:00.054Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:06 UTC: 2026-04-22T08:06:00.054Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:07 UTC: 2026-04-22T08:07:00.059Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:07 UTC: 2026-04-22T08:07:00.059Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:07 UTC: 2026-04-22T08:07:00.060Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:08 UTC: 2026-04-22T08:08:00.066Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:08 UTC: 2026-04-22T08:08:00.066Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:08 UTC: 2026-04-22T08:08:00.066Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:09 UTC: 2026-04-22T08:09:00.074Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:09 UTC: 2026-04-22T08:09:00.074Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:09 UTC: 2026-04-22T08:09:00.074Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:10 UTC: 2026-04-22T08:10:00.075Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:10 UTC: 2026-04-22T08:10:00.076Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:10 UTC: 2026-04-22T08:10:00.076Z
+[SchedulerService] TICK callback completed
+2026-04-22T08:10:40.089Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T08:10:41.129Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+[SchedulerService] TICK at 10:11 UTC: 2026-04-22T08:11:00.076Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:11 UTC: 2026-04-22T08:11:00.077Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:11 UTC: 2026-04-22T08:11:00.077Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:12 UTC: 2026-04-22T08:12:00.096Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:12 UTC: 2026-04-22T08:12:00.097Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:12 UTC: 2026-04-22T08:12:00.097Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:13 UTC: 2026-04-22T08:13:00.100Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:13 UTC: 2026-04-22T08:13:00.101Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:13 UTC: 2026-04-22T08:13:00.101Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:14 UTC: 2026-04-22T08:14:00.103Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:14 UTC: 2026-04-22T08:14:00.104Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:14 UTC: 2026-04-22T08:14:00.104Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:15 UTC: 2026-04-22T08:15:00.104Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:15 UTC: 2026-04-22T08:15:00.105Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:15 UTC: 2026-04-22T08:15:00.105Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:16 UTC: 2026-04-22T08:16:00.105Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:16 UTC: 2026-04-22T08:16:00.106Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:16 UTC: 2026-04-22T08:16:00.106Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:17 UTC: 2026-04-22T08:17:00.108Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:17 UTC: 2026-04-22T08:17:00.108Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:17 UTC: 2026-04-22T08:17:00.109Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:18 UTC: 2026-04-22T08:18:00.109Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:18 UTC: 2026-04-22T08:18:00.112Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:18 UTC: 2026-04-22T08:18:00.113Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:19 UTC: 2026-04-22T08:19:00.111Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:19 UTC: 2026-04-22T08:19:00.113Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:19 UTC: 2026-04-22T08:19:00.113Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:20 UTC: 2026-04-22T08:20:00.112Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:20 UTC: 2026-04-22T08:20:00.113Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:20 UTC: 2026-04-22T08:20:00.113Z
+[SchedulerService] TICK callback completed
+2026-04-22T08:20:40.091Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T08:20:41.109Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+[SchedulerService] TICK at 10:21 UTC: 2026-04-22T08:21:00.116Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:21 UTC: 2026-04-22T08:21:00.117Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:21 UTC: 2026-04-22T08:21:00.117Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:22 UTC: 2026-04-22T08:22:00.119Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:22 UTC: 2026-04-22T08:22:00.120Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:22 UTC: 2026-04-22T08:22:00.120Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:23 UTC: 2026-04-22T08:23:00.123Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:23 UTC: 2026-04-22T08:23:00.124Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:23 UTC: 2026-04-22T08:23:00.124Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:24 UTC: 2026-04-22T08:24:00.131Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:24 UTC: 2026-04-22T08:24:00.131Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:24 UTC: 2026-04-22T08:24:00.131Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:25 UTC: 2026-04-22T08:25:00.132Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:25 UTC: 2026-04-22T08:25:00.133Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:25 UTC: 2026-04-22T08:25:00.133Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:26 UTC: 2026-04-22T08:26:05.893Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:26 UTC: 2026-04-22T08:26:05.996Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:26 UTC: 2026-04-22T08:26:05.996Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:30 UTC: 2026-04-22T08:30:35.336Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:30 UTC: 2026-04-22T08:30:35.415Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:30 UTC: 2026-04-22T08:30:35.415Z
+[SchedulerService] TICK callback completed
+2026-04-22T08:30:40.103Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T08:30:41.359Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+[SchedulerService] TICK at 10:31 UTC: 2026-04-22T08:31:35.343Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:31 UTC: 2026-04-22T08:31:35.417Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:31 UTC: 2026-04-22T08:31:35.417Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:32 UTC: 2026-04-22T08:32:35.346Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:32 UTC: 2026-04-22T08:32:35.417Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:32 UTC: 2026-04-22T08:32:35.417Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:33 UTC: 2026-04-22T08:33:35.351Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:33 UTC: 2026-04-22T08:33:35.417Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:33 UTC: 2026-04-22T08:33:35.418Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:34 UTC: 2026-04-22T08:34:35.351Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:34 UTC: 2026-04-22T08:34:35.418Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:34 UTC: 2026-04-22T08:34:35.418Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:35 UTC: 2026-04-22T08:35:35.353Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:35 UTC: 2026-04-22T08:35:35.419Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:35 UTC: 2026-04-22T08:35:35.420Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:36 UTC: 2026-04-22T08:36:35.360Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:36 UTC: 2026-04-22T08:36:35.421Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:36 UTC: 2026-04-22T08:36:35.422Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:37 UTC: 2026-04-22T08:37:35.366Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:37 UTC: 2026-04-22T08:37:35.422Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:37 UTC: 2026-04-22T08:37:35.423Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:38 UTC: 2026-04-22T08:38:35.373Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:38 UTC: 2026-04-22T08:38:35.423Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:38 UTC: 2026-04-22T08:38:35.424Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:39 UTC: 2026-04-22T08:39:35.373Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:39 UTC: 2026-04-22T08:39:35.429Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:39 UTC: 2026-04-22T08:39:35.429Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:40 UTC: 2026-04-22T08:40:35.374Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:40 UTC: 2026-04-22T08:40:35.429Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:40 UTC: 2026-04-22T08:40:35.429Z
+[SchedulerService] TICK callback completed
+2026-04-22T08:40:40.108Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T08:40:41.176Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+[SchedulerService] TICK at 10:41 UTC: 2026-04-22T08:41:35.375Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:41 UTC: 2026-04-22T08:41:35.430Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:41 UTC: 2026-04-22T08:41:35.431Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:42 UTC: 2026-04-22T08:42:35.376Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:42 UTC: 2026-04-22T08:42:35.430Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:42 UTC: 2026-04-22T08:42:35.431Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:43 UTC: 2026-04-22T08:43:35.377Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:43 UTC: 2026-04-22T08:43:35.434Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:43 UTC: 2026-04-22T08:43:35.436Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:44 UTC: 2026-04-22T08:44:35.379Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:44 UTC: 2026-04-22T08:44:35.435Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:44 UTC: 2026-04-22T08:44:35.436Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:45 UTC: 2026-04-22T08:45:35.380Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:45 UTC: 2026-04-22T08:45:35.435Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:45 UTC: 2026-04-22T08:45:35.436Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:46 UTC: 2026-04-22T08:46:35.381Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:46 UTC: 2026-04-22T08:46:35.436Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:46 UTC: 2026-04-22T08:46:35.436Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:47 UTC: 2026-04-22T08:47:35.383Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:47 UTC: 2026-04-22T08:47:35.437Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:47 UTC: 2026-04-22T08:47:35.437Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:48 UTC: 2026-04-22T08:48:35.385Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:48 UTC: 2026-04-22T08:48:35.438Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:48 UTC: 2026-04-22T08:48:35.438Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:49 UTC: 2026-04-22T08:49:35.388Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:49 UTC: 2026-04-22T08:49:35.439Z
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 10:49 UTC: 2026-04-22T08:49:35.440Z
+[SchedulerService] TICK callback completed

@@ -135,6 +135,8 @@ export interface WebuiHandlerOptions {
   wsPort: number
   /** Health check function (injected from existing server handler). */
   getHealthCheck: () => { status: string }
+  /** Optional base path prefix for all routes (e.g. '/agents'). */
+  basePath?: string
   /** Logger. */
   logger: PlatformServices['logger']
   /** OAuth callback deps — when provided, enables /api/oauth/callback route. */
@@ -176,6 +178,7 @@ export function createWebuiHandler(options: WebuiHandlerOptions): WebuiHandler {
     wsProtocol,
     wsPort,
     getHealthCheck,
+    basePath,
     logger,
     trustedProxies,
   } = options
@@ -201,7 +204,14 @@ export function createWebuiHandler(options: WebuiHandlerOptions): WebuiHandler {
 
   async function fetch(req: Request): Promise<Response> {
     const url = new URL(req.url)
-    const path = url.pathname
+    let path = url.pathname
+
+    // ── Strip base path prefix ──
+    if (basePath && path.startsWith(basePath)) {
+      path = path.slice(basePath.length)
+      if (path === '') path = '/'
+    }
+
     const useSecureCookies = shouldUseSecureCookies(req, secureCookies)
 
     // ── Health endpoint (no auth) ──
@@ -376,7 +386,8 @@ export function createWebuiHandler(options: WebuiHandlerOptions): WebuiHandler {
     if (!session) {
       const accept = req.headers.get('accept') ?? ''
       if (accept.includes('text/html') || path === '/' || path === '') {
-        return Response.redirect('/login', 302)
+        const redirectUrl = basePath ? `${basePath}/login` : '/login'
+        return Response.redirect(redirectUrl, 302)
       }
       return Response.json({ error: 'Unauthorized' }, { status: 401 })
     }
@@ -410,6 +421,7 @@ export function createWebuiHandler(options: WebuiHandlerOptions): WebuiHandler {
     },
   }
 }
+
 
 // ---------------------------------------------------------------------------
 // Standalone server (backwards-compatible, uses Bun.serve)

@@ -1,0 +1,352 @@
+2026-04-22T07:45:45.828Z [docs] Synced 0 docs
+2026-04-22T07:45:45.828Z [config] No bundled assets dir found - using fallback config-defaults
+2026-04-22T07:45:45.828Z INFO  [bootstrap] Config artifacts initialized
+2026-04-22T07:45:45.828Z INFO  [bootstrap] Global config found
+2026-04-22T07:45:45.841Z [CredentialManager] Backend available: secure-storage (priority 100)
+2026-04-22T07:45:45.841Z [CredentialManager] Using backend: secure-storage
+2026-04-22T07:45:45.875Z INFO  [session] Reinitializing auth for connection: github-copilot (oauth)
+2026-04-22T07:45:45.875Z INFO  [session] Auth env vars set for connection: github-copilot
+2026-04-22T07:45:45.875Z [summarize] resetSummarizationClient called (no-op)
+2026-04-22T07:45:45.875Z INFO  [session] Setting up ConfigWatcher for workspace: 5d673540-d73c-0211-009e-541155b2058d (/Users/luke/.craft-agent/workspaces/my-workspace)
+2026-04-22T07:45:45.875Z [ConfigWatcher] Starting for workspace: my-workspace
+2026-04-22T07:45:45.878Z [ConfigWatcher] Watching global configs: /Users/luke/.craft-agent
+2026-04-22T07:45:45.878Z [ConfigWatcher] Setting up workspace watcher for: /Users/luke/.craft-agent/workspaces/my-workspace
+2026-04-22T07:45:45.879Z [ConfigWatcher] Watching workspace recursively: /Users/luke/.craft-agent/workspaces/my-workspace
+2026-04-22T07:45:45.879Z [ConfigWatcher] Watching app themes directory: /Users/luke/.craft-agent/themes
+2026-04-22T07:45:45.879Z [ConfigWatcher] Watching app permissions directory: /Users/luke/.craft-agent/permissions
+2026-04-22T07:45:45.879Z [ConfigWatcher] Known sources: ["gas-cert-pro-react","supabase-gpenmsngnocuswfponqp","supabase-tcsvptuecdqwkhkgtiaz","google-calendar","apple-reminders","github","figma"]
+2026-04-22T07:45:45.880Z [ConfigWatcher] Known skills: ["personal-context","sync-craft-agents"]
+2026-04-22T07:45:45.880Z [ConfigWatcher] Known themes: ["one-dark-pro","haze","tokyo-night","vitesse","catppuccin","dracula","rose-pine","gruvbox","nord","pierre","github","default","ghostty","night-owl","solarized"]
+2026-04-22T07:45:45.880Z [ConfigWatcher] Started watching files
+2026-04-22T07:45:45.880Z [PERF] configWatcher.start: 4.71ms (ensureDir:0.1ms → watchGlobalConfigs:2.8ms → watchWorkspaceDir:3.6ms → watchAppThemesDir:3.9ms → watchAppPermissionsDir:4.1ms → scanSources:4.3ms → scanSkills:4.4ms → scanAppThemes:4.5ms → initLlmConnectionsHash:4.7ms) {"workspaceId":"my-workspace"}
+2026-04-22T07:45:45.880Z [event-bus] DEBUG [EventBus] Created for workspace: 5d673540-d73c-0211-009e-541155b2058d
+2026-04-22T07:45:45.880Z [automation-system] DEBUG [AutomationSystem] No automations config found at /Users/luke/.craft-agent/workspaces/my-workspace/automations.json
+2026-04-22T07:45:45.880Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.880Z [prompt-handler] DEBUG [PromptHandler] Subscribed to event bus
+2026-04-22T07:45:45.880Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.880Z [retry-scheduler] DEBUG [RetryScheduler] Started
+2026-04-22T07:45:45.881Z [webhook-handler] DEBUG [WebhookHandler] Subscribed to event bus
+2026-04-22T07:45:45.881Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.881Z [event-log-handler] DEBUG [EventLogHandler] Subscribed to event bus, logging to /Users/luke/.craft-agent/workspaces/my-workspace/events.jsonl
+2026-04-22T07:45:45.881Z [automation-system] DEBUG [AutomationSystem] Handlers created and subscribed
+2026-04-22T07:45:45.881Z [automation-system] DEBUG [AutomationSystem] Scheduler started
+2026-04-22T07:45:45.881Z [automation-system] DEBUG [AutomationSystem] Created for workspace: 5d673540-d73c-0211-009e-541155b2058d
+2026-04-22T07:45:45.881Z INFO  [session] Initialized AutomationSystem for workspace 5d673540-d73c-0211-009e-541155b2058d
+2026-04-22T07:45:45.881Z INFO  [session] Setting up ConfigWatcher for workspace: 6004489e-c79b-967f-a3a7-4edf1efe4e8c (/Users/luke/.craft-agent/workspaces/gas-cert-pro)
+2026-04-22T07:45:45.881Z [ConfigWatcher] Starting for workspace: gas-cert-pro
+2026-04-22T07:45:45.881Z [ConfigWatcher] Watching global configs: /Users/luke/.craft-agent
+2026-04-22T07:45:45.881Z [ConfigWatcher] Setting up workspace watcher for: /Users/luke/.craft-agent/workspaces/gas-cert-pro
+2026-04-22T07:45:45.881Z [ConfigWatcher] Watching workspace recursively: /Users/luke/.craft-agent/workspaces/gas-cert-pro
+2026-04-22T07:45:45.881Z [ConfigWatcher] Watching app themes directory: /Users/luke/.craft-agent/themes
+2026-04-22T07:45:45.882Z [ConfigWatcher] Watching app permissions directory: /Users/luke/.craft-agent/permissions
+2026-04-22T07:45:45.882Z [ConfigWatcher] Known sources: ["gas-cert-pro-drive","supabase-gpenmsngnocuswfponqp","supabase-tcsvptuecdqwkhkgtiaz","github","sentry"]
+2026-04-22T07:45:45.882Z [ConfigWatcher] Known skills: ["legend-state","check-project-issues","prettier-on-finish","no-manual-memoization","git-status-block"]
+2026-04-22T07:45:45.883Z [ConfigWatcher] Known themes: ["one-dark-pro","haze","tokyo-night","vitesse","catppuccin","dracula","rose-pine","gruvbox","nord","pierre","github","default","ghostty","night-owl","solarized"]
+2026-04-22T07:45:45.883Z [ConfigWatcher] Started watching files
+2026-04-22T07:45:45.883Z [PERF] configWatcher.start: 1.88ms (ensureDir:0.0ms → watchGlobalConfigs:0.1ms → watchWorkspaceDir:0.4ms → watchAppThemesDir:0.6ms → watchAppPermissionsDir:1.4ms → scanSources:1.6ms → scanSkills:1.7ms → scanAppThemes:1.8ms → initLlmConnectionsHash:1.9ms) {"workspaceId":"gas-cert-pro"}
+2026-04-22T07:45:45.883Z [event-bus] DEBUG [EventBus] Created for workspace: 6004489e-c79b-967f-a3a7-4edf1efe4e8c
+2026-04-22T07:45:45.883Z [automation-system] DEBUG [AutomationSystem] No automations config found at /Users/luke/.craft-agent/workspaces/gas-cert-pro/automations.json
+2026-04-22T07:45:45.883Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.883Z [prompt-handler] DEBUG [PromptHandler] Subscribed to event bus
+2026-04-22T07:45:45.883Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.883Z [retry-scheduler] DEBUG [RetryScheduler] Started
+2026-04-22T07:45:45.883Z [webhook-handler] DEBUG [WebhookHandler] Subscribed to event bus
+2026-04-22T07:45:45.883Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.883Z [event-log-handler] DEBUG [EventLogHandler] Subscribed to event bus, logging to /Users/luke/.craft-agent/workspaces/gas-cert-pro/events.jsonl
+2026-04-22T07:45:45.883Z [automation-system] DEBUG [AutomationSystem] Handlers created and subscribed
+2026-04-22T07:45:45.883Z [automation-system] DEBUG [AutomationSystem] Scheduler started
+2026-04-22T07:45:45.883Z [automation-system] DEBUG [AutomationSystem] Created for workspace: 6004489e-c79b-967f-a3a7-4edf1efe4e8c
+2026-04-22T07:45:45.883Z INFO  [session] Initialized AutomationSystem for workspace 6004489e-c79b-967f-a3a7-4edf1efe4e8c
+2026-04-22T07:45:45.883Z INFO  [session] Setting up ConfigWatcher for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe (/Users/luke/.craft-agent/workspaces/boiler-manuals)
+2026-04-22T07:45:45.883Z [ConfigWatcher] Starting for workspace: boiler-manuals
+2026-04-22T07:45:45.883Z [ConfigWatcher] Watching global configs: /Users/luke/.craft-agent
+2026-04-22T07:45:45.883Z [ConfigWatcher] Setting up workspace watcher for: /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:45:45.883Z [ConfigWatcher] Watching workspace recursively: /Users/luke/.craft-agent/workspaces/boiler-manuals
+2026-04-22T07:45:45.884Z [ConfigWatcher] Watching app themes directory: /Users/luke/.craft-agent/themes
+2026-04-22T07:45:45.884Z [ConfigWatcher] Watching app permissions directory: /Users/luke/.craft-agent/permissions
+2026-04-22T07:45:45.884Z [ConfigWatcher] Known sources: []
+2026-04-22T07:45:45.884Z [ConfigWatcher] Known skills: ["boiler-manuals-app","legendstate"]
+2026-04-22T07:45:45.884Z [ConfigWatcher] Known themes: ["one-dark-pro","haze","tokyo-night","vitesse","catppuccin","dracula","rose-pine","gruvbox","nord","pierre","github","default","ghostty","night-owl","solarized"]
+2026-04-22T07:45:45.885Z [ConfigWatcher] Started watching files
+2026-04-22T07:45:45.885Z [PERF] configWatcher.start: 1.64ms (ensureDir:0.0ms → watchGlobalConfigs:0.1ms → watchWorkspaceDir:0.5ms → watchAppThemesDir:0.9ms → watchAppPermissionsDir:1.4ms → scanSources:1.5ms → scanSkills:1.5ms → scanAppThemes:1.6ms → initLlmConnectionsHash:1.6ms) {"workspaceId":"boiler-manuals"}
+2026-04-22T07:45:45.885Z [event-bus] DEBUG [EventBus] Created for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:45:45.885Z [automation-system] DEBUG [AutomationSystem] No automations config found at /Users/luke/.craft-agent/workspaces/boiler-manuals/automations.json
+2026-04-22T07:45:45.885Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.885Z [prompt-handler] DEBUG [PromptHandler] Subscribed to event bus
+2026-04-22T07:45:45.885Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.885Z [retry-scheduler] DEBUG [RetryScheduler] Started
+2026-04-22T07:45:45.885Z [webhook-handler] DEBUG [WebhookHandler] Subscribed to event bus
+2026-04-22T07:45:45.885Z [event-bus] DEBUG [EventBus] Registered any-handler
+2026-04-22T07:45:45.885Z [event-log-handler] DEBUG [EventLogHandler] Subscribed to event bus, logging to /Users/luke/.craft-agent/workspaces/boiler-manuals/events.jsonl
+2026-04-22T07:45:45.885Z [automation-system] DEBUG [AutomationSystem] Handlers created and subscribed
+2026-04-22T07:45:45.885Z [automation-system] DEBUG [AutomationSystem] Scheduler started
+2026-04-22T07:45:45.885Z [automation-system] DEBUG [AutomationSystem] Created for workspace: 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:45:45.885Z INFO  [session] Initialized AutomationSystem for workspace 0c5456ee-8b4f-1b99-4ab6-f03b0bf25bfe
+2026-04-22T07:45:45.892Z [PERF] session.listSessions: 7.39ms (readdir:0.1ms → parsed:7.3ms) {"count":83}
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260422-plain-bison (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260422-frosty-eddy (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260419-vital-dune (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260403-crisp-spruce (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260402-proud-grove (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260402-first-rapids (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260403-copper-jasper (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260402-sleek-mesa (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260323-ivory-nebula (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260403-wide-stone (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.893Z [Mode] Set permission mode to allow-all for session 260319-dynamic-zinc (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260323-warm-tide (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-alert-frost (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-lucid-grove (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-amber-crystal (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-focal-maple (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-cool-birch (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-clear-zinc (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-fit-hawk (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260402-neat-star (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-first-otter (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-deep-thunder (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-lucid-grove (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-tidy-lynx (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-nimble-beaver (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-first-zinc (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.894Z [Mode] Set permission mode to allow-all for session 260403-young-twilight (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260403-proud-badger (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260402-apt-cosmos (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260402-prime-bay (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-mild-thunder (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-light-thunder (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-alert-pebble (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-sharp-spray (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-clear-moss (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-light-titanium (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-aware-ocean (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-rapid-halo (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-pure-moss (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.895Z [Mode] Set permission mode to allow-all for session 260329-keen-jasmine (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260329-brave-willow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260329-crisp-stone (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260329-fluid-sunset (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260329-aware-spring (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260327-polished-reed (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260327-vital-sunset (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260327-agile-sapphire (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260327-fit-jade (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260327-coral-topaz (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260327-tall-clover (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260326-lean-lily (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260326-snug-ember (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260326-copper-bay (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260325-awake-pond (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.896Z [Mode] Set permission mode to allow-all for session 260325-deep-swamp (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-deep-zinc (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-pure-woods (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-quiet-pond (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-azure-maple (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-deft-stag (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-pure-salmon (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-active-silver (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260325-refined-sparrow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260323-agile-wave (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260319-windy-steel (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260323-alert-grove (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260323-new-elm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260323-focal-silver (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260323-pure-glade (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260322-fine-dusk (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260322-wild-amber (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260322-bold-marble (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.897Z [Mode] Set permission mode to allow-all for session 260319-safe-deer (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.898Z [Mode] Set permission mode to allow-all for session 260319-swift-gorge (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.898Z [Mode] Set permission mode to allow-all for session 260319-alert-valley (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.898Z [Mode] Set permission mode to allow-all for session 260319-wild-pearl (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-coral-obsidian (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-broad-crow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-warm-stream (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-refined-grove (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-amber-glen (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-misty-cosmos (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.899Z [Mode] Set permission mode to allow-all for session 260319-proud-bamboo (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [PERF] session.listSessions: 10.84ms (readdir:0.1ms → parsed:10.8ms) {"count":129}
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260422-smooth-cosmos (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260422-broad-quartz (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260422-fresh-sequoia (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260422-polished-harbor (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260422-silent-flint (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-spry-geyser (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260422-grand-elm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-pure-silver (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-alert-sand (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-neat-hawk (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-quiet-sequoia (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-brave-rose (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-golden-geyser (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260420-cool-elm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.910Z [Mode] Set permission mode to allow-all for session 260421-azure-trail (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260421-smooth-pass (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260421-aware-inlet (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-noble-falcon (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-misty-swan (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-neat-spring (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-golden-lily (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-tall-owl (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-apt-star (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260419-wild-bobcat (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-azure-reed (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-eager-flow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-sharp-eagle (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-alert-breeze (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-lean-topaz (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-noble-slate (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-plain-torrent (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-deep-silver (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-early-reef (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-silver-topaz (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-vivid-torrent (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-active-rapids (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-ready-cobble (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260417-keen-reed (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-open-wolf (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.911Z [Mode] Set permission mode to allow-all for session 260418-sunny-chrome (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260418-lean-ridge (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260418-fresh-reef (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260418-fit-aspen (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260418-quiet-opal (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260418-zesty-basalt (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260418-noble-palm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-misty-granite (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-grand-storm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-clear-mist (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-fine-cliff (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-jade-twilight (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-golden-sparrow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260417-early-mountain (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260415-nimble-falls (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260415-fresh-elm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260415-zesty-mist (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260415-strong-harbor (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.912Z [Mode] Set permission mode to allow-all for session 260415-wild-geyser (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260415-polished-falls (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260415-open-flower (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260415-clever-gem (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260415-deep-peak (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260415-amber-woods (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260408-prime-sage (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260407-high-reef (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260407-still-coast (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260407-swift-vista (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-fit-galaxy (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260403-fit-bonsai (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-polished-bamboo (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-early-inlet (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-spry-crystal (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-bold-moor (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260325-refined-vine (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-brisk-moon (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.913Z [Mode] Set permission mode to allow-all for session 260405-spry-willow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260405-vivid-cypress (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260405-ivory-obsidian (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260403-young-spruce (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260403-brisk-opal (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260403-witty-nebula (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-amber-torrent (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-refined-coyote (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-lean-crystal (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-strong-sapphire (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-broad-glen (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260405-warm-maple (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260405-windy-field (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260405-polished-tide (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260405-wise-clover (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-gentle-quasar (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-smooth-palm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-azure-garnet (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-prime-rose (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-crisp-lion (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-quiet-vine (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-lively-harbor (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-snug-valley (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-early-clover (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-ready-dove (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.914Z [Mode] Set permission mode to allow-all for session 260404-young-quasar (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-broad-sparrow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-bold-boulder (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-calm-iron (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-strong-basalt (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-swift-ruby (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-frosty-pearl (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-slim-dolphin (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260404-active-falcon (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-deep-ridge (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-first-cobble (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-cool-rainbow (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-wild-heron (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-airy-gorge (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-pearl-hill (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-clear-gust (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-neat-elm (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-crisp-bonsai (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-fit-surge (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-neat-ravine (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-fair-bluff (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260323-airy-finch (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260403-lively-pine (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to safe for session 260324-frosty-delta (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.915Z [Mode] Set permission mode to allow-all for session 260324-keen-eddy (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260325-gentle-moss (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260325-pure-dolphin (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260325-zesty-vine (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [PERF] session.listSessions: 0.40ms (readdir:0.0ms → parsed:0.4ms) {"count":5}
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260324-airy-stag (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260324-clever-halo (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260324-still-granite (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260324-swift-sage (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z [Mode] Set permission mode to allow-all for session 260324-vivid-cherry (changedBy=restore, modeVersion=1)
+2026-04-22T07:45:45.916Z INFO  [session] Loaded 217 sessions from disk (metadata only)
+2026-04-22T07:45:45.917Z INFO  Craft Agent server listening on ws://0.0.0.0:9100
+2026-04-22T07:45:45.917Z [CredentialManager] Found llm_oauth in secure-storage
+CRAFT_SERVER_URL=ws://0.0.0.0:9100
+CRAFT_SERVER_TOKEN=4d38de5682867af2ce1e7aa05d9930710968b93b6b7a3f4fd4d86048c194d6ff
+CRAFT_WEBUI_URL=http://0.0.0.0:9100
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+2026-04-22T07:45:45.917Z INFO  [handler] Model refresh [github-copilot]: fetching (provider=pi, piAuth=github-copilot, hasOAuthRefresh=true, hasOAuthAccess=true)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T07:45:47.086Z INFO  [handler] Model refresh [github-copilot]: fetched 17 models from provider: claude-opus-4.7, claude-sonnet-4.6, gemini-3.1-pro-preview, gpt-5.2-codex, gpt-5.3-codex, gpt-5.4, gpt-5-mini, grok-code-fast-1, claude-sonnet-4, claude-sonnet-4.5, claude-opus-4.5, claude-haiku-4.5, gemini-3-flash-preview, gemini-2.5-pro, oswe-vscode-prime, oswe-vscode-secondary, gpt-5.2
+2026-04-22T07:45:47.200Z [ConfigWatcher] config.json changed
+2026-04-22T07:45:47.204Z [ConfigWatcher] config.json changed
+2026-04-22T07:45:47.205Z [ConfigWatcher] config.json changed
+[SchedulerService] TICK at 09:46 UTC: 2026-04-22T07:46:00.000Z
+2026-04-22T07:46:00.002Z [event-bus] DEBUG [EventBus] Emitting: SchedulerTick
+2026-04-22T07:46:00.002Z [event-log-handler] DEBUG [EventLogHandler] Logged: SchedulerTick
+2026-04-22T07:46:00.003Z [event-bus] DEBUG [EventBus] Emitted: SchedulerTick (0 handlers, 3 any-handlers)
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:46 UTC: 2026-04-22T07:46:00.003Z
+2026-04-22T07:46:00.003Z [event-bus] DEBUG [EventBus] Emitting: SchedulerTick
+2026-04-22T07:46:00.003Z [event-log-handler] DEBUG [EventLogHandler] Logged: SchedulerTick
+2026-04-22T07:46:00.003Z [event-bus] DEBUG [EventBus] Emitted: SchedulerTick (0 handlers, 3 any-handlers)
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:46 UTC: 2026-04-22T07:46:00.003Z
+2026-04-22T07:46:00.003Z [event-bus] DEBUG [EventBus] Emitting: SchedulerTick
+2026-04-22T07:46:00.003Z [event-log-handler] DEBUG [EventLogHandler] Logged: SchedulerTick
+2026-04-22T07:46:00.003Z [event-bus] DEBUG [EventBus] Emitted: SchedulerTick (0 handlers, 3 any-handlers)
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:47 UTC: 2026-04-22T07:47:00.003Z
+2026-04-22T07:47:00.003Z [event-bus] DEBUG [EventBus] Emitting: SchedulerTick
+2026-04-22T07:47:00.004Z [event-log-handler] DEBUG [EventLogHandler] Logged: SchedulerTick
+2026-04-22T07:47:00.004Z [event-bus] DEBUG [EventBus] Emitted: SchedulerTick (0 handlers, 3 any-handlers)
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:47 UTC: 2026-04-22T07:47:00.004Z
+2026-04-22T07:47:00.004Z [event-bus] DEBUG [EventBus] Emitting: SchedulerTick
+2026-04-22T07:47:00.004Z [event-log-handler] DEBUG [EventLogHandler] Logged: SchedulerTick
+2026-04-22T07:47:00.004Z [event-bus] DEBUG [EventBus] Emitted: SchedulerTick (0 handlers, 3 any-handlers)
+[SchedulerService] TICK callback completed
+[SchedulerService] TICK at 09:47 UTC: 2026-04-22T07:47:00.004Z
+2026-04-22T07:47:00.004Z [event-bus] DEBUG [EventBus] Emitting: SchedulerTick
+2026-04-22T07:47:00.004Z [event-log-handler] DEBUG [EventLogHandler] Logged: SchedulerTick
+2026-04-22T07:47:00.004Z [event-bus] DEBUG [EventBus] Emitted: SchedulerTick (0 handlers, 3 any-handlers)
+[SchedulerService] TICK callback completed

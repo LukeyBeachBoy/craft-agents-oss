@@ -110,6 +110,7 @@ const webuiDir = process.env.CRAFT_WEBUI_DIR || undefined
 const webuiEnabled = webuiDir && existsSync(webuiDir)
 const webuiSecureCookies = parseOptionalBooleanEnv('CRAFT_WEBUI_SECURE_COOKIE', process.env.CRAFT_WEBUI_SECURE_COOKIE)
 const webuiWsUrl = parseOptionalWebSocketUrl('CRAFT_WEBUI_WS_URL', process.env.CRAFT_WEBUI_WS_URL)
+const webuiBasePath = process.env.CRAFT_WEBUI_BASE_PATH || undefined
 const serverToken = process.env.CRAFT_SERVER_TOKEN
 
 // ---------------------------------------------------------------------------
@@ -136,6 +137,7 @@ if (webuiEnabled && serverToken) {
     secureCookies: webuiSecureCookies,
     publicWsUrl: webuiWsUrl,
     wsProtocol: rpcProtocol,
+    basePath: webuiBasePath,
     // WebUI is served on the same port as WS — wsPort matches the RPC port
     wsPort: rpcPort,
     getHealthCheck: () => healthCheckFn?.() ?? { status: 'starting' },

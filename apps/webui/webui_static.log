@@ -1,0 +1,42 @@
+Resolving dependencies
+Resolved, downloaded and extracted [242]
+Saved lockfile
+ INFO  Accepting connections at http://localhost:3100
+ HTTP  4/22/2026 9:46:06 AM 127.0.0.1 HEAD /
+ HTTP  4/22/2026 9:46:06 AM 127.0.0.1 Returned 200 in 13 ms
+ HTTP  4/22/2026 9:47:25 AM ::1 GET /
+ HTTP  4/22/2026 9:47:25 AM ::1 Returned 200 in 4 ms
+ HTTP  4/22/2026 9:47:25 AM ::1 GET /manifest.json
+ HTTP  4/22/2026 9:47:25 AM ::1 Returned 200 in 2 ms
+ HTTP  4/22/2026 9:47:25 AM ::1 GET /assets/main-B5pDxQwU.js
+ HTTP  4/22/2026 9:47:25 AM ::1 GET /assets/main-CyeNwzU1.css
+ HTTP  4/22/2026 9:47:25 AM ::1 Returned 200 in 1 ms
+ HTTP  4/22/2026 9:47:25 AM ::1 Returned 200 in 3 ms
+ HTTP  4/22/2026 9:47:25 AM ::1 GET /api/config
+ HTTP  4/22/2026 9:47:25 AM ::1 Returned 404 in 1 ms
+ HTTP  4/22/2026 9:47:26 AM ::1 GET /favicon.svg
+ HTTP  4/22/2026 9:47:26 AM ::1 GET /favicon.ico
+ HTTP  4/22/2026 9:47:26 AM ::1 Returned 200 in 3 ms
+ HTTP  4/22/2026 9:47:26 AM ::1 Returned 200 in 2 ms
+ HTTP  4/22/2026 9:47:26 AM ::1 GET /apple-touch-icon.png
+ HTTP  4/22/2026 9:47:26 AM ::1 Returned 200 in 1 ms
+ HTTP  4/22/2026 9:47:28 AM ::1 GET /api/config
+ HTTP  4/22/2026 9:47:28 AM ::1 Returned 404 in 4 ms
+ HTTP  4/22/2026 9:47:29 AM ::1 GET /api/config
+ HTTP  4/22/2026 9:47:29 AM ::1 Returned 404 in 2 ms
+ HTTP  4/22/2026 9:47:29 AM ::1 GET /api/config
+ HTTP  4/22/2026 9:47:29 AM ::1 Returned 404 in 6 ms
+ HTTP  4/22/2026 9:47:29 AM ::1 GET /api/config
+ HTTP  4/22/2026 9:47:29 AM ::1 Returned 404 in 4 ms
+ HTTP  4/22/2026 9:47:30 AM ::1 GET /apple-touch-icon-precomposed.png
+ HTTP  4/22/2026 9:47:30 AM ::1 Returned 404 in 2 ms
+ HTTP  4/22/2026 9:47:30 AM ::1 GET /apple-touch-icon.png
+ HTTP  4/22/2026 9:47:30 AM ::1 GET /favicon.ico
+ HTTP  4/22/2026 9:47:30 AM ::1 GET /favicon.ico
+ HTTP  4/22/2026 9:47:30 AM ::1 Returned 200 in 1 ms
+ HTTP  4/22/2026 9:47:30 AM ::1 Returned 200 in 2 ms
+ HTTP  4/22/2026 9:47:30 AM ::1 GET /favicon.svg
+ HTTP  4/22/2026 9:47:30 AM ::1 GET /apple-touch-icon.png
+ HTTP  4/22/2026 9:47:30 AM ::1 Returned 200 in 2 ms
+ HTTP  4/22/2026 9:47:30 AM ::1 Returned 200 in 1 ms
+ HTTP  4/22/2026 9:47:30 AM ::1 Returned 200 in 1 ms

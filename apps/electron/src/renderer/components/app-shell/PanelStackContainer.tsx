@@ -21,6 +21,13 @@ import { useAtomValue } from 'jotai'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { panelStackAtom, focusedPanelIdAtom, focusedSessionIdAtom } from '@/atoms/panel-stack'
+import {
+  isSettingsNavigation,
+  isSourcesNavigation,
+  isSkillsNavigation,
+  isAutomationsNavigation,
+  useNavigationState
+} from '@/contexts/NavigationContext'
 import { PanelSlot } from './PanelSlot'
 import { PanelResizeSash } from './PanelResizeSash'
 import {
@@ -59,6 +66,7 @@ export function PanelStackContainer({
   const panelStack = useAtomValue(panelStackAtom)
   const focusedPanelId = useAtomValue(focusedPanelIdAtom)
   const focusedSessionId = useAtomValue(focusedSessionIdAtom)
+  const navState = useNavigationState()
 
   const contentPanels = panelStack
 
@@ -67,7 +75,19 @@ export function PanelStackContainer({
   // (e.g., allSessions/session/abc), show content. When on a list view
   // (e.g., allSessions), show navigator. This allows back-navigation to
   // return to the session list.
-  const hasSelectedContent = isCompact && !!focusedSessionId
+  const isSettings = isSettingsNavigation(navState)
+  const isSources = isSourcesNavigation(navState)
+  const isSkills = isSkillsNavigation(navState)
+  const isAutomations = isAutomationsNavigation(navState)
+
+  const hasSelectedContent = isCompact && (
+    !!focusedSessionId ||
+    (isSettings && navState.subpage !== 'navigator') ||
+    (isSources && navState.details) ||
+    (isSkills && navState.details) ||
+    (isAutomations && navState.details)
+  )
+
   const visiblePanels = isCompact
     ? contentPanels.filter(e => e.id === focusedPanelId).slice(0, 1)
     : contentPanels

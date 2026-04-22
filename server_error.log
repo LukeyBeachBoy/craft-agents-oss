@@ -1,0 +1,872 @@
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+434 | }
+      ^
+error: Unexpected }
+    at /Users/luke/Development/craft-agents-oss/packages/server-core/src/webui/http-server.ts:434:1
+
+Bun v1.3.11 (macOS arm64)
+2026-04-22T08:52:28.461Z WARN  [bootstrap] Stale lock file found (PID 32745), overwriting
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+2026-04-22T09:03:47.979Z WARN  [bootstrap] Stale lock file found (PID 36744), overwriting
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+❌  Refusing to bind to a network address without TLS.
+   Authentication tokens would be sent in cleartext.
+
+   Options:
+     1. Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://
+     2. Pass --allow-insecure-bind to override (NOT recommended for production)
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)
+
+⚠️  WARNING: Server is listening on a network address without TLS.
+   Authentication tokens will be sent in cleartext.
+   Set CRAFT_RPC_TLS_CERT and CRAFT_RPC_TLS_KEY to enable wss://.
+
+[listModelsViaHttp] token exchange OK, baseUrl=https://api.individual.githubcopilot.com
+[listModelsViaHttp] GET /models returned 44 models
+[fetchCopilotModels] tier1-httpApi: total=44 enabled=17 | enabled=19(claude-opus-4.7,claude-sonnet-4.6,gemini-3.1-pro-preview,gpt-5.2-codex,gpt-5.3-codex,gpt-5.4,gpt-5-mini,grok-code-fast-1,claude-sonnet-4,claude-sonnet-4.5,claude-opus-4.5,claude-haiku-4.5,gemini-3-flash-preview,gemini-2.5-pro,gpt-4.1-2025-04-14,oswe-vscode-prime,oswe-vscode-secondary,gpt-5.2,gpt-4.1); no-policy=22(goldeneye-free-auto,gpt-5.4-mini,accounts/msft/routers/f185i3v4,accounts/msft/routers/fmfeto88,accounts/msft/routers/gdjv4v2v,gpt-4o-mini-2024-07-18,gpt-4o-2024-11-20,gpt-4o-2024-08-06,text-embedding-3-small,text-embedding-3-small-inference,gpt-3.5-turbo-0613,gpt-4,gpt-4-0613,gpt-4-0125-preview,gpt-4o-2024-05-13,gpt-4-o-preview,gpt-3.5-turbo,gpt-4o-mini,gpt-4,gpt-4o,gpt-4-o-preview,text-embedding-ada-002); disabled=3(minimax-m2.5,accounts/msft/routers/mp3yn0h7,accounts/msft/routers/yaqq2gxh)

@@ -42,8 +42,8 @@ function ErrorScreen({ message, onRetry }: { message: string; onRetry: () => voi
         </button>
         <button
           onClick={() => {
-            fetch('/api/auth/logout', { method: 'POST' }).then(() => {
-              window.location.href = '/login'
+            fetch('api/auth/logout', { method: 'POST' }).then(() => {
+              window.location.href = 'login'
             })
           }}
           className="px-4 py-1.5 rounded-md bg-background shadow-minimal text-[13px] text-foreground/70 cursor-pointer"
@@ -67,11 +67,11 @@ export default function App() {
 
     try {
       // 1. Fetch WS URL from the server (cookie auth)
-      const configRes = await fetch('/api/config', { credentials: 'same-origin' })
+      const configRes = await fetch('api/config', { credentials: 'same-origin' })
       if (!configRes.ok) {
         if (configRes.status === 401) {
           // Session expired — redirect to login
-          window.location.href = '/login'
+          window.location.href = 'login'
           return
         }
         throw new Error(`Failed to fetch config: ${configRes.status}`)
@@ -88,7 +88,7 @@ export default function App() {
       // so we can include it in the WebSocket handshake
       if (!workspaceId) {
         try {
-          const wsRes = await fetch('/api/config/workspaces', { credentials: 'same-origin' })
+          const wsRes = await fetch('api/config/workspaces', { credentials: 'same-origin' })
           if (wsRes.ok) {
             const { defaultWorkspaceId } = await wsRes.json() as { defaultWorkspaceId?: string }
             if (defaultWorkspaceId) workspaceId = defaultWorkspaceId
